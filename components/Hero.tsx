@@ -18,7 +18,9 @@ const Hero: React.FC = () => {
     "https://github.com/spiderfranlee/images/blob/main/Cliffs%201.png?raw=true",
     "https://github.com/spiderfranlee/images/blob/main/Cliffs%202.png?raw=true",
     "https://github.com/spiderfranlee/images/blob/main/Cliffs%20yoga%202.png?raw=true",
-    "https://github.com/spiderfranlee/images/blob/main/Cliffs%20yoga%203.png?raw=true"
+    "https://github.com/spiderfranlee/images/blob/main/Cliffs%20yoga%203.png?raw=true",
+    "https://github.com/spiderfranlee/images/blob/main/yacht1.jpeg?raw=true",
+    "https://github.com/spiderfranlee/images/blob/main/yacht2.jpeg?raw=true"
   ];
 
   // Autoplay for the small preview card

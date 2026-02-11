@@ -24,11 +24,13 @@ const About: React.FC = () => {
     },
     {
       image: "https://github.com/spiderfranlee/images/blob/main/yacht1.jpeg?raw=true",
-      text: "Embark on a private yacht excursion to discover hidden coves and experience the coastline from a new perspective."
+      text: "Embark on a private yacht excursion to discover hidden coves and experience the coastline from a new perspective.",
+      position: "object-bottom"
     },
     {
       image: "https://github.com/spiderfranlee/images/blob/main/yacht2.jpeg?raw=true",
-      text: "Enjoy ultimate relaxation on the open sea, complete with snorkeling, swimming, and sunset views."
+      text: "Enjoy ultimate relaxation on the open sea, complete with snorkeling, swimming, and sunset views.",
+      position: "object-top"
     },
     {
       image: "https://github.com/spiderfranlee/images/blob/main/Workout%20area.png?raw=true",
@@ -55,7 +57,7 @@ const About: React.FC = () => {
                   <img 
                     src={item.image} 
                     alt={`Highlight ${index + 1}`}
-                    className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+                    className={`w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 ${item.position || 'object-center'}`}
                   />
                 </div>
                 <div className="p-6 flex-1 flex items-start bg-dark-gray relative z-20">
