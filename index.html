@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Reset Guys | Reclaim Yourself</title>
     
+    <!-- Favicon to fix 404 error -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+    
     <!-- Google Fonts: Roboto -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -75,13 +78,25 @@
           -ms-overflow-style: none;  /* IE and Edge */
           scrollbar-width: none;  /* Firefox */
       }
+      
+      /* Chat Widget Luxury Styles */
+      .input-luxury {
+          background: rgba(255, 255, 255, 0.05);
+          border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+          transition: all 0.3s ease;
+      }
+      .input-luxury:focus {
+          background: rgba(255, 255, 255, 0.1);
+          border-bottom-color: #D97736;
+          outline: none;
+      }
     </style>
 <script type="importmap">
 {
   "imports": {
-    "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
+    "react": "https://esm.sh/react@^19.2.4",
     "react/": "https://esm.sh/react@^19.2.4/",
-    "react": "https://esm.sh/react@^19.2.4"
+    "lucide-react": "https://esm.sh/lucide-react@^0.563.0"
   }
 }
 </script>
@@ -534,36 +549,63 @@
         </div>
     </footer>
 
-    <!-- Chat Widget -->
+    <!-- Luxury Concierge Widget -->
     <div class="fixed bottom-6 right-6 z-50 flex flex-col items-end">
         <!-- Chat Window -->
-        <div id="chat-window" class="hidden mb-4 w-80 bg-dark-gray border border-white/10 rounded-xl shadow-2xl overflow-hidden animate-in slide-in-from-bottom-5 fade-in duration-300">
-            <div class="bg-primary p-4 flex justify-between items-center">
-                <h3 class="text-white font-bold flex items-center gap-2">
-                    <i data-lucide="message-square" class="w-4.5 h-4.5"></i>
-                    Chat with Us
-                </h3>
-                <button onclick="toggleChat()" class="text-white/80 hover:text-white transition-colors">
+        <div id="chat-window" class="hidden mb-4 w-96 bg-dark-gray/95 backdrop-blur-xl border border-white/10 rounded-xl shadow-2xl overflow-hidden animate-in slide-in-from-bottom-5 fade-in duration-300">
+            <!-- Luxury Header -->
+            <div class="bg-gradient-to-r from-primary to-secondary p-4 flex justify-between items-center relative overflow-hidden">
+                <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10"></div>
+                <div>
+                    <h3 class="text-white font-bold uppercase tracking-widest text-sm flex items-center gap-2 relative z-10">
+                        <i data-lucide="sparkles" class="w-4 h-4"></i>
+                        Concierge Service
+                    </h3>
+                    <p class="text-white/80 text-[10px] uppercase tracking-wide relative z-10 mt-0.5">Priority Access</p>
+                </div>
+                <button onclick="toggleChat()" class="text-white/80 hover:text-white transition-colors relative z-10">
                     <i data-lucide="x" class="w-5 h-5"></i>
                 </button>
             </div>
-            <div class="p-4 bg-black">
-                <p class="text-gray-300 text-sm mb-4">Have questions about the retreat? Send us a message and we'll reply via email shortly.</p>
-                <form onsubmit="handleChatSubmit(event)">
-                    <textarea id="chat-message" placeholder="Hi, I'm interested in the upcoming retreat..." class="w-full h-32 bg-white/10 border border-white/20 rounded-lg p-3 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent resize-none text-sm mb-3"></textarea>
-                    <button type="submit" class="w-full bg-primary text-white font-bold py-2 rounded-lg hover:bg-opacity-90 transition-colors flex items-center justify-center gap-2">
-                        Send Message <i data-lucide="send" class="w-4 h-4"></i>
+            
+            <div class="p-5 bg-black/80" id="chat-content">
+                <p class="text-gray-300 text-xs mb-5 font-light tracking-wide leading-relaxed">
+                    Welcome to <span class="text-primary font-bold">The Reset Guys</span>. Please provide your details below for a personalized consultation.
+                </p>
+                
+                <form id="inquiry-form" onsubmit="handleChatSubmit(event)" class="space-y-3">
+                    <input required name="name" type="text" placeholder="FULL NAME" class="w-full bg-transparent border-b border-white/20 p-2 text-white placeholder-gray-600 focus:outline-none focus:border-primary text-sm transition-colors uppercase tracking-wider font-bold">
+                    
+                    <input required name="email" type="email" placeholder="EMAIL ADDRESS" class="w-full bg-transparent border-b border-white/20 p-2 text-white placeholder-gray-600 focus:outline-none focus:border-primary text-sm transition-colors uppercase tracking-wider font-bold">
+                    
+                    <input name="phone" type="tel" placeholder="PHONE (OPTIONAL)" class="w-full bg-transparent border-b border-white/20 p-2 text-white placeholder-gray-600 focus:outline-none focus:border-primary text-sm transition-colors uppercase tracking-wider font-bold">
+                    
+                    <textarea required name="message" placeholder="HOW CAN WE ASSIST YOU?" class="w-full bg-white/5 border border-white/10 rounded-sm p-3 text-white placeholder-gray-600 focus:outline-none focus:border-primary/50 text-sm mb-2 h-24 resize-none mt-2 font-medium"></textarea>
+                    
+                    <button type="submit" id="submit-btn" class="w-full bg-primary text-white font-black uppercase tracking-[0.2em] text-xs py-3.5 rounded-sm hover:bg-white hover:text-black transition-all duration-300 flex items-center justify-center gap-2 shadow-lg shadow-primary/20">
+                        Request Access <i data-lucide="arrow-right" class="w-3 h-3"></i>
                     </button>
                 </form>
             </div>
-            <div class="bg-dark-gray p-2 text-center border-t border-white/5">
-                <p class="text-xs text-gray-500">Replies will be sent to your email client.</p>
+
+            <!-- Success Message State (Hidden by default) -->
+            <div id="success-state" class="hidden p-8 bg-black/90 flex-col items-center justify-center text-center h-[420px]">
+                <div class="w-16 h-16 rounded-full border-2 border-primary flex items-center justify-center text-primary mb-4 animate-bounce">
+                    <i data-lucide="check" class="w-8 h-8"></i>
+                </div>
+                <h3 class="text-white font-bold uppercase tracking-widest text-lg mb-2">Request Received</h3>
+                <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                    Thank you. Your inquiry has been routed to our priority concierge team. Expect a personal response shortly.
+                </p>
+                <button onclick="toggleChat()" class="text-xs text-primary uppercase tracking-widest border-b border-primary pb-1 hover:text-white hover:border-white transition-colors">
+                    Close Concierge
+                </button>
             </div>
         </div>
 
         <!-- Toggle Button -->
-        <button onclick="toggleChat()" id="chat-toggle-btn" class="group flex items-center justify-center w-16 h-16 rounded-full shadow-lg shadow-primary/30 transition-all duration-300 transform hover:scale-110 bg-primary text-white" aria-label="Chat">
-             <i data-lucide="message-square" class="w-7 h-7 group-hover:animate-pulse"></i>
+        <button onclick="toggleChat()" id="chat-toggle-btn" class="group flex items-center justify-center w-16 h-16 rounded-full shadow-2xl shadow-primary/40 transition-all duration-300 transform hover:scale-110 bg-gradient-to-br from-primary to-secondary text-white border border-white/10" aria-label="Chat">
+             <i data-lucide="bot" class="w-7 h-7 group-hover:rotate-12 transition-transform"></i>
         </button>
     </div>
 
@@ -838,29 +880,55 @@
                 chatWindow.classList.remove('hidden');
                 chatToggleBtn.innerHTML = `<i data-lucide="x" class="w-7 h-7"></i>`;
                 chatToggleBtn.classList.add('bg-white', 'text-primary', 'rotate-90');
-                chatToggleBtn.classList.remove('bg-primary', 'text-white');
-                document.getElementById('chat-message').focus();
+                chatToggleBtn.classList.remove('bg-gradient-to-br', 'from-primary', 'to-secondary', 'text-white');
+                // Reset form state if re-opening
+                document.getElementById('inquiry-form').classList.remove('hidden');
+                document.getElementById('success-state').classList.add('hidden');
+                document.getElementById('success-state').classList.remove('flex');
+                document.getElementById('chat-content').classList.remove('hidden');
             } else {
                 chatWindow.classList.add('hidden');
-                chatToggleBtn.innerHTML = `<i data-lucide="message-square" class="w-7 h-7 group-hover:animate-pulse"></i>`;
+                chatToggleBtn.innerHTML = `<i data-lucide="bot" class="w-7 h-7 group-hover:rotate-12 transition-transform"></i>`;
                 chatToggleBtn.classList.remove('bg-white', 'text-primary', 'rotate-90');
-                chatToggleBtn.classList.add('bg-primary', 'text-white');
+                chatToggleBtn.classList.add('bg-gradient-to-br', 'from-primary', 'to-secondary', 'text-white');
             }
             lucide.createIcons();
         }
 
         function handleChatSubmit(e) {
             e.preventDefault();
-            const message = document.getElementById('chat-message').value;
-            if (!message.trim()) return;
-
-            const email = "theresetguys@gmail.com";
-            const subject = "Retreat Inquiry";
-            const body = encodeURIComponent(message);
-            window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
+            const form = document.getElementById('inquiry-form');
+            const submitBtn = document.getElementById('submit-btn');
+            const originalBtnText = submitBtn.innerHTML;
             
-            document.getElementById('chat-message').value = '';
-            toggleChat();
+            // Gather Data
+            const formData = new FormData(form);
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbzoyqqz6ylsM-fhbGMlI5_MO3-LZvOigGJ_9PHgh6aK3TNtWVQi1v2JGPnVXp1_Gn5T/exec';
+            
+            // Loading State
+            submitBtn.innerHTML = `Sending... <i class="animate-spin ml-2" data-lucide="loader-2"></i>`;
+            lucide.createIcons();
+            submitBtn.disabled = true;
+            submitBtn.classList.add('opacity-75', 'cursor-not-allowed');
+
+            fetch(scriptURL, { method: 'POST', body: formData, mode: 'no-cors' })
+            .then(response => {
+                // Success UI
+                document.getElementById('chat-content').classList.add('hidden');
+                document.getElementById('success-state').classList.remove('hidden');
+                document.getElementById('success-state').classList.add('flex');
+                lucide.createIcons();
+                form.reset();
+            })
+            .catch(error => {
+                console.error('Error!', error.message);
+                alert("Something went wrong. Please email us directly at theresetguys@gmail.com");
+            })
+            .finally(() => {
+                submitBtn.innerHTML = originalBtnText;
+                submitBtn.disabled = false;
+                submitBtn.classList.remove('opacity-75', 'cursor-not-allowed');
+            });
         }
     </script>
 </body>
