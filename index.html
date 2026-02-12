@@ -106,7 +106,7 @@
     <script type="importmap">
 {
   "imports": {
-    "@google/generative-ai": "https://esm.run/@google/generative-ai",
+    "@google/genai": "https://esm.run/@google/genai",
     "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
     "react/": "https://esm.sh/react@^19.2.4/",
     "react": "https://esm.sh/react@^19.2.4"
@@ -879,7 +879,7 @@
     </script>
     
     <script type="module">
-        import { GoogleGenerativeAI } from "@google/generative-ai";
+        import { GoogleGenAI, Type } from "@google/genai";
 
         // 🔴 PASTE YOUR API KEY BELOW
         const API_KEY = "AIzaSyCfq-N0dl04Qr38yh0-z5mqc4S4aQ2EYKM"; 
@@ -889,41 +889,36 @@
 
         // Initialize Gemini
         let chatSession = null;
-        let genAI = null;
+        let ai = null;
 
         try {
-            genAI = new GoogleGenerativeAI(API_KEY);
-            const model = genAI.getGenerativeModel({ 
-                model: "gemini-1.5-flash",
-                tools: [{
-                    functionDeclarations: [{
-                        name: "book_retreat",
-                        description: "Sends customer booking details (Name, Email, Details) to The Reset Guys admin team.",
-                        parameters: {
-                            type: "OBJECT",
-                            properties: {
-                                customer_name: { type: "STRING", description: "The full name of the customer." },
-                                customer_email: { type: "STRING", description: "The customer's email address." },
-                                details: { type: "STRING", description: "Any specific questions, dates, or requests." }
-                            },
-                            required: ["customer_name", "customer_email"]
-                        }
-                    }]
+            ai = new GoogleGenAI({ apiKey: API_KEY });
+            
+            // Tool Definition
+            const bookingTool = {
+                functionDeclarations: [{
+                    name: "book_retreat",
+                    description: "Sends customer booking details (Name, Email, Details) to The Reset Guys admin team.",
+                    parameters: {
+                        type: Type.OBJECT,
+                        properties: {
+                            customer_name: { type: Type.STRING, description: "The full name of the customer." },
+                            customer_email: { type: Type.STRING, description: "The customer's email address." },
+                            details: { type: Type.STRING, description: "Any specific questions, dates, or requests." }
+                        },
+                        required: ["customer_name", "customer_email"]
+                    }
                 }]
+            };
+
+            chatSession = ai.chats.create({
+                model: "gemini-3-flash-preview",
+                config: {
+                    systemInstruction: "You are the Concierge AI for 'The Reset Guys', a luxury wellness and adventure retreat. Your tone is exclusive, professional, but friendly (like a high-end hotel concierge). Your goal is to collect the user's Name, Email, and any questions so you can book them using the 'book_retreat' tool. Do not ask for phone numbers. Be concise.",
+                    tools: [bookingTool]
+                }
             });
 
-            chatSession = model.startChat({
-                history: [
-                    {
-                        role: "user",
-                        parts: [{ text: "You are the Concierge AI for 'The Reset Guys', a luxury wellness and adventure retreat. Your tone is exclusive, professional, but friendly (like a high-end hotel concierge). Your goal is to collect the user's Name, Email, and any questions so you can book them using the 'book_retreat' tool. Do not ask for phone numbers. Be concise." }],
-                    },
-                    {
-                        role: "model",
-                        parts: [{ text: "Understood. I am ready to assist guests in reclaiming their edge." }],
-                    }
-                ]
-            });
         } catch (e) {
             console.error("AI Init Error:", e);
         }
@@ -942,9 +937,11 @@
 
             try {
                 // 2. Send to Gemini
-                const result = await chatSession.sendMessage(text);
-                const response = await result.response;
-                const functionCalls = response.functionCalls();
+                let result = await chatSession.sendMessage({ message: text });
+                let response = result; // Response is directly the result in new SDK for generated content? 
+                // The new SDK sendMessage returns GenerateContentResponse directly.
+
+                const functionCalls = response.functionCalls;
 
                 // 3. Check for Tool Use (Booking)
                 if (functionCalls && functionCalls.length > 0) {
@@ -957,18 +954,26 @@
                         await sendToGoogleSheet(call.args);
                         
                         // Tell Gemini we did it
-                        const result2 = await chatSession.sendMessage([{
+                        // Construct the tool response part
+                        const toolResponsePart = {
                             functionResponse: {
                                 name: "book_retreat",
-                                response: { status: "success" }
+                                response: { result: "success" },
+                                id: call.id
                             }
-                        }]);
-                        const textResponse = result2.response.text();
+                        };
+                        
+                        // Send the tool response back to the model
+                        const result2 = await chatSession.sendMessage({
+                            message: [toolResponsePart]
+                        });
+                        
+                        const textResponse = result2.text;
                         addMessageToUI("AI", textResponse, "ai");
                     }
                 } else {
                     // Normal Text Response
-                    addMessageToUI("AI", response.text(), "ai");
+                    addMessageToUI("AI", response.text, "ai");
                 }
 
             } catch (error) {
