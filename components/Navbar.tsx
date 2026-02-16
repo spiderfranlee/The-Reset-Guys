@@ -27,6 +27,7 @@ const Navbar: React.FC = () => {
     { name: 'Extras', href: '#extras' },
     { name: 'Dates', href: '#dates' },
     { name: 'Itinerary', href: '#itinerary' },
+    { name: 'Pricing', href: '#pricing' },
     { name: 'Villa', href: '#the-villa' },
     { name: 'Contact', href: '#contact' },
   ];
@@ -39,10 +40,10 @@ const Navbar: React.FC = () => {
           <div className="flex-shrink-0 flex items-center">
             {/* 
               REPLACE WITH YOUR LOGO IMAGE 
-              <img src="/path/to/logo.png" alt="The Reset Guys" className="h-12" />
+              <img src="/path/to/logo.png" alt="The Reset Clann" className="h-12" />
             */}
             <a href="#" className="text-2xl font-black italic tracking-tighter text-white uppercase">
-              The <span className="text-primary">Reset</span> Guys
+              The <span className="text-primary">Reset</span> Clann
             </a>
           </div>
 

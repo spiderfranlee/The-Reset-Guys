@@ -17,21 +17,17 @@ const Team: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20">
-             {/* Guide 1 - Paul */}
+             {/* Guide 1 - Dev */}
              <div className="group">
                 <div className="relative overflow-hidden rounded-xl aspect-[3/4] mb-8 bg-dark-gray border border-white/10 group-hover:border-primary/50 transition-colors duration-500">
-                   <video 
-                      src="https://github.com/spiderfranlee/images/blob/c08d3c108eb1bc5690a76da61ff6911dcc185f3b/Dev_sBioVid.mp4?raw=true"
-                      poster="https://github.com/spiderfranlee/images/blob/main/39d750b7-e19c-4405-a45b-686989e26c8f.JPG?raw=true"
-                      autoPlay
-                      muted
-                      loop
-                      playsInline
+                   <img 
+                      src="https://github.com/spiderfranlee/images/blob/main/Dev%20Profile%20Reset.png?raw=true"
+                      alt="Dev"
                       className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
                    />
                    
                    <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black via-black/80 to-transparent">
-                      <h3 className="text-2xl font-bold text-white uppercase mb-1">Paul</h3>
+                      <h3 className="text-2xl font-bold text-white uppercase mb-1">Dev</h3>
                       <p className="text-primary font-bold tracking-wider text-xs uppercase">Strength & Performance</p>
                    </div>
                 </div>
@@ -41,17 +37,29 @@ const Team: React.FC = () => {
                       Specializing in building bodies that can handle real life. His approach bridges the gap between elite performance and longevity. He focuses on bio-mechanics and strength standards that allow you to train hard in the gym so you can play hard on the weekends without breaking down.
                    </p>
                    
-                   {/* Video Trigger */}
+                   {/* Video Trigger - Now containing the Autoplay Video */}
                    <div 
                      onClick={() => setActiveVideo("https://github.com/spiderfranlee/images/blob/c08d3c108eb1bc5690a76da61ff6911dcc185f3b/Dev_sBioVid.mp4?raw=true")}
-                     className="relative overflow-hidden rounded-lg bg-dark-gray border border-white/10 p-4 flex items-center gap-4 group/video cursor-pointer hover:bg-white/5 transition-colors"
+                     className="relative overflow-hidden rounded-lg bg-dark-gray border border-white/10 aspect-video group/video cursor-pointer hover:border-primary/50 transition-colors shadow-lg"
                    >
-                      <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-primary group-hover/video:scale-110 transition-transform">
-                         <Play size={20} fill="currentColor" />
+                      <video 
+                        src="https://github.com/spiderfranlee/images/blob/c08d3c108eb1bc5690a76da61ff6911dcc185f3b/Dev_sBioVid.mp4?raw=true"
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                        className="w-full h-full object-cover opacity-90 group-hover/video:opacity-100 transition-opacity"
+                      />
+                      
+                      {/* Overlay */}
+                      <div className="absolute inset-0 bg-black/30 group-hover/video:bg-black/10 transition-colors flex items-center justify-center">
+                         <div className="w-14 h-14 rounded-full bg-primary/90 text-black flex items-center justify-center shadow-lg transform group-hover/video:scale-110 transition-transform">
+                            <Play size={24} fill="currentColor" className="ml-1" />
+                         </div>
                       </div>
-                      <div className="flex-1">
-                         <p className="text-white font-bold text-sm uppercase">Watch Bio Video</p>
-                         <p className="text-xs text-gray-500">Introduction & Philosophy</p>
+
+                      <div className="absolute bottom-3 left-3 bg-black/80 backdrop-blur-md px-3 py-1.5 rounded text-xs text-white font-bold uppercase tracking-wider border border-white/10">
+                        Watch Bio
                       </div>
                    </div>
                 </div>
@@ -61,7 +69,7 @@ const Team: React.FC = () => {
              <div className="group">
                 <div className="relative overflow-hidden rounded-xl aspect-[3/4] mb-8 bg-dark-gray border border-white/10 group-hover:border-secondary/50 transition-colors duration-500">
                    <img 
-                      src="https://github.com/spiderfranlee/images/blob/main/Website%20Fran.png?raw=true" 
+                      src="https://github.com/spiderfranlee/images/blob/main/Fran%20Reset%20Pic.png?raw=true" 
                       alt="Fran"
                       className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
                    />

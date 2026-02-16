@@ -89,24 +89,24 @@ const Hero: React.FC = () => {
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-black/30"></div>
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full h-full flex flex-col lg:flex-row items-center min-h-screen pt-24 pb-12 lg:py-0">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col items-center justify-center pt-32 pb-20">
         
-          {/* Text Content - Centered vertically, Left aligned on Desktop */}
-          <div className="w-full lg:w-[40%] max-w-2xl text-center lg:text-left flex flex-col items-center lg:items-start z-10 order-1 lg:pr-8 pointer-events-none lg:pointer-events-auto"> 
+          {/* Text Content - Centered */}
+          <div className="w-full max-w-5xl text-center z-10 mb-16"> 
             <div className="pointer-events-auto">
               <h2 className="text-primary font-bold tracking-[0.2em] uppercase mb-4 animate-fade-in-up">
-                Wellness & Adventure Retreat
+                FITNESS & LUXURY RETREAT
               </h2>
               
-              <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white uppercase tracking-tighter mb-6 leading-none drop-shadow-2xl">
+              <h1 className="text-5xl md:text-7xl lg:text-9xl font-black text-white uppercase tracking-tighter mb-8 leading-none drop-shadow-2xl">
                 Reclaim <br/> <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Your Edge</span>
               </h1>
 
-              <p className="max-w-xl text-lg md:text-xl text-gray-300 mb-10 font-medium leading-relaxed">
+              <p className="max-w-2xl mx-auto text-lg md:text-xl text-gray-300 mb-12 font-medium leading-relaxed">
                 The ultimate circuit breaker. High-performance training meets high-quality downtime. Break the cycle of stress and hangovers without giving up the good life.
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button onClick={scrollToAbout} className="group">
                   Book Your Retreat
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -118,26 +118,28 @@ const Hero: React.FC = () => {
             </div>
           </div>
 
-          {/* Showreel Card - Absolute right on Desktop */}
-          <div className="w-full lg:w-[55%] xl:w-[60%] mt-12 lg:mt-0 z-20 order-2 flex justify-center lg:block lg:absolute lg:right-0 lg:top-1/2 lg:-translate-y-1/2 lg:pl-8">
+          {/* Showreel Card - Centered Beneath Text */}
+          <div className="w-full max-w-6xl z-20 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
             <div 
                onClick={() => setIsShowreelOpen(true)}
-               className="group relative cursor-pointer w-full bg-black/40 backdrop-blur-xl border border-white/10 rounded-2xl p-6 md:p-8 hover:bg-black/60 hover:border-primary/50 transition-all duration-500 shadow-2xl animate-fade-in-right transform hover:scale-[1.01]"
+               className="group relative cursor-pointer w-full bg-black/40 backdrop-blur-xl border border-white/10 rounded-2xl p-4 md:p-6 hover:bg-black/60 hover:border-primary/50 transition-all duration-500 shadow-2xl transform hover:scale-[1.01]"
             >
-               <div className="flex justify-between items-stretch gap-6 md:gap-8 h-72 sm:h-80 lg:h-96 xl:h-[32rem]">
+               <div className="flex flex-col md:flex-row justify-between items-stretch gap-6 md:gap-8 h-auto md:h-80 lg:h-96">
                   {/* Left Side: Play Button & Title */}
-                  <div className="flex flex-col justify-between py-2">
-                     <div className="w-16 h-16 xl:w-20 xl:h-20 rounded-full border border-white/30 flex items-center justify-center bg-white/5 group-hover:bg-white group-hover:text-black group-hover:scale-110 transition-all duration-300">
-                        <Play size={28} className="ml-1" fill="currentColor" />
+                  <div className="flex md:flex-col flex-row items-center md:items-start justify-between md:justify-center gap-4 py-2 px-2 md:w-1/4 shrink-0 border-b md:border-b-0 md:border-r border-white/10 md:pr-6">
+                     <div className="flex items-center gap-4 md:flex-col md:items-start md:gap-6">
+                       <div className="w-16 h-16 xl:w-20 xl:h-20 rounded-full border border-white/30 flex items-center justify-center bg-white/5 group-hover:bg-white group-hover:text-black group-hover:scale-110 transition-all duration-300">
+                          <Play size={28} className="ml-1" fill="currentColor" />
+                       </div>
+                       <div>
+                         <span className="text-2xl md:text-3xl xl:text-4xl font-bold text-white tracking-tight leading-none block">Play<br/>Showreel</span>
+                       </div>
                      </div>
-                     <div>
-                       <span className="text-2xl md:text-3xl xl:text-4xl font-bold text-white tracking-tight leading-none block">Play<br/>Showreel</span>
-                       <p className="text-gray-400 text-sm xl:text-base mt-3 group-hover:text-white transition-colors hidden sm:block">Watch the experience</p>
-                     </div>
+                     <p className="text-gray-400 text-sm xl:text-base mt-0 md:mt-auto group-hover:text-white transition-colors">Watch the experience</p>
                   </div>
 
                   {/* Right Side: Autoplaying Preview */}
-                  <div className="relative flex-1 h-full rounded-xl overflow-hidden bg-black border border-white/10 group-hover:border-white/30 transition-colors shrink-0">
+                  <div className="relative flex-1 h-64 md:h-auto rounded-xl overflow-hidden bg-black border border-white/10 group-hover:border-white/30 transition-colors">
                      {highlightImages.map((img, idx) => (
                         <img 
                            key={idx}

@@ -10,7 +10,7 @@ const Footer: React.FC = () => {
           {/* Brand */}
           <div className="space-y-4">
             <h3 className="text-2xl font-black italic uppercase text-white">
-              The <span className="text-primary">Reset</span> Guys
+              The <span className="text-primary">Reset</span> Clann
             </h3>
             <p className="text-gray-400 text-sm max-w-xs leading-relaxed">
               The ultimate circuit breaker for high-performers. We combine elite training with luxury downtime to help you reclaim your edge without giving up the good life.
@@ -36,18 +36,18 @@ const Footer: React.FC = () => {
               <a href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-primary hover:text-white transition-all">
                 <Instagram size={20} />
               </a>
-              <a href="mailto:theresetguys@gmail.com" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-primary hover:text-white transition-all">
+              <a href="mailto:theresetclann@gmail.com" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-primary hover:text-white transition-all">
                 <Mail size={20} />
               </a>
             </div>
             <p className="text-gray-400 text-sm mt-4">
-              theresetguys@gmail.com
+              theresetclann@gmail.com
             </p>
           </div>
         </div>
 
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
-          <p>&copy; {new Date().getFullYear()} The Reset Guys. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} The Reset Clann. All rights reserved.</p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <a href="#" className="hover:text-white">Privacy Policy</a>
             <a href="#" className="hover:text-white">Terms of Service</a>
