@@ -5,14 +5,14 @@ import { Check, Star } from 'lucide-react';
 const Pricing: React.FC = () => {
   const options = [
     {
-      title: 'Buddy Suite Share',
+      title: '4 Person Room Share',
       subtitle: '4 Spots Available',
       price: '€2,199',
       per: '/ person',
       totalValue: 'Total Room Value: €8,796',
       features: [
         'Shared Luxury Suite',
-        '2 Queen Beds',
+        '4 Single Beds / Bunks',
         'En-suite Bathroom',
         'Garden View'
       ],
