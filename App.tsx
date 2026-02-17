@@ -1,12 +1,12 @@
 import React from 'react';
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import About from './components/About';
-import Philosophy from './components/Philosophy';
-import Team from './components/Team';
-import Pricing from './components/Pricing';
-import ChatWidget from './components/ChatWidget';
-import Footer from './components/Footer';
+import Navbar from './components/Navbar.tsx';
+import Hero from './components/Hero.tsx';
+import About from './components/About.tsx';
+import Philosophy from './components/Philosophy.tsx';
+import Team from './components/Team.tsx';
+import Pricing from './components/Pricing.tsx';
+import ChatWidget from './components/ChatWidget.tsx';
+import Footer from './components/Footer.tsx';
 import { Waves, Ship, Utensils, ShoppingBag, Music, Flower2, HeartPulse, Mountain } from 'lucide-react';
 
 // Main Application Container

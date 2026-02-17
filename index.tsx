@@ -1,6 +1,6 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-import App from './App';
+import App from './App.tsx';
 
 // Professional Portfolio Entry Point
 // Mounts the React application to the DOM

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Button from './Button';
+import Button from './Button.tsx';
 import { ArrowRight, Play, X, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const Hero: React.FC = () => {
