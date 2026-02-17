@@ -83,7 +83,7 @@ const Pricing: React.FC = () => {
                 <div className="mb-6">
                    <h3 className="text-xl font-bold text-white uppercase mb-2">{option.title}</h3>
                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10">
-                     <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+                     <span className="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
                      <span className="text-xs font-bold uppercase tracking-wide text-gray-300">{option.subtitle}</span>
                    </div>
                 </div>

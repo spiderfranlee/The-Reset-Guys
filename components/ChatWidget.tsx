@@ -1,6 +1,9 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { X, Send, Loader2 } from 'lucide-react';
-import { GoogleGenAI, Type, Tool } from "@google/genai";
+import { GoogleGenAI, Type } from "@google/genai";
+
+// Ensure process is treated as a global for TypeScript
+declare var process: any;
 
 // Custom Butler/Concierge Icon Component
 const ConciergeIcon = ({ size = 24, className = "" }: { size?: number, className?: string }) => (
@@ -58,15 +61,26 @@ const ChatWidget: React.FC = () => {
     setIsLoading(true);
 
     try {
+      // Check if GoogleGenAI is loaded
+      if (!GoogleGenAI) {
+        throw new Error("GoogleGenAI SDK not loaded");
+      }
+
       // Initialize chat session if it doesn't exist
       if (!chatSessionRef.current) {
-        if (!process.env.API_KEY) {
-           throw new Error("API Configuration Error");
+        // Safe access to process.env.API_KEY
+        const apiKey = typeof process !== 'undefined' ? process.env?.API_KEY : undefined;
+
+        if (!apiKey) {
+           console.error("API Key not found in process.env.API_KEY");
+           setMessages(prev => [...prev, { role: 'model', text: "I'm currently unable to connect to the server (Configuration Missing). Please email us at theresetclann@gmail.com." }]);
+           setIsLoading(false);
+           return;
         }
         
         const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
         
-        const bookingTool: Tool = {
+        const bookingTool = {
           functionDeclarations: [{
             name: "book_retreat",
             description: "Sends customer booking details (Name, Email, Details) to The Reset Clann admin team.",
@@ -119,10 +133,7 @@ const ChatWidget: React.FC = () => {
 
     } catch (error) {
       console.error("Chat Error:", error);
-      const errorMessage = process.env.API_KEY 
-        ? "I'm having a little trouble connecting right now. Please try again or email us at theresetclann@gmail.com."
-        : "Concierge service is currently offline (API Key missing). Please email us directly.";
-        
+      const errorMessage = "I'm having a little trouble connecting right now. Please try again or email us at theresetclann@gmail.com.";
       setMessages(prev => [...prev, { role: 'model', text: errorMessage }]);
     } finally {
       setIsLoading(false);

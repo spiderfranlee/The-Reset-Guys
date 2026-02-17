@@ -9,7 +9,9 @@ import ChatWidget from './components/ChatWidget';
 import Footer from './components/Footer';
 import { Waves, Ship, Utensils, ShoppingBag, Music, Flower2, HeartPulse, Mountain } from 'lucide-react';
 
-function App() {
+// Main Application Container
+const App: React.FC = () => {
+  // Configuration for extra activities
   const extras = [
     { 
       icon: <Waves className="text-primary" size={24} />, 
