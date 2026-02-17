@@ -85,8 +85,13 @@ const Navbar: React.FC = () => {
         <div className="flex justify-between items-center">
           {/* Logo Section */}
           <div className="flex-shrink-0 flex items-center">
-            <a href="#" className="text-2xl font-black italic tracking-tighter text-white uppercase">
-              The <span className="text-primary">Reset</span> Clann
+            <a href="#" className="flex flex-col leading-none group">
+              <span className="text-2xl font-black italic tracking-tighter text-white uppercase group-hover:text-primary transition-colors duration-300">
+                CIRCUIT BREAKER
+              </span>
+              <span className="text-[0.65rem] font-bold tracking-[0.3em] text-gray-400 uppercase mt-1 ml-0.5 group-hover:text-white transition-colors duration-300">
+                by The Reset Clann
+              </span>
             </a>
           </div>
 
@@ -225,7 +230,7 @@ const Hero: React.FC = () => {
               </h2>
               
               <h1 className="text-5xl md:text-7xl lg:text-9xl font-black text-white uppercase tracking-tighter mb-8 leading-none drop-shadow-2xl">
-                Reclaim <br/> <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Your Edge</span>
+                THE RESET <br/> <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">YOU NEED</span>
               </h1>
 
               <p className="max-w-2xl mx-auto text-lg md:text-xl text-gray-300 mb-12 font-medium leading-relaxed">
@@ -1052,7 +1057,6 @@ const App: React.FC = () => {
       <Navbar />
       <main>
         <Hero />
-        <Pricing />
         <About />
         <Philosophy />
         <Team />
@@ -1078,12 +1082,15 @@ const App: React.FC = () => {
                 Extra <span className="text-primary">Activities</span>
               </h2>
 
+              {/* Featured Activities with Images */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
                  {featuredExtras.map((extra, index) => (
                      <div key={index} className="group relative h-96 overflow-hidden rounded-2xl border border-white/10 bg-dark-gray">
+                         {/* Image */}
                          <img src={extra.image} alt={extra.title} className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
                          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-90 transition-opacity group-hover:opacity-80"></div>
                          
+                         {/* Content */}
                          <div className="absolute bottom-0 left-0 p-8 w-full">
                             <div className="mb-4 inline-flex items-center justify-center rounded-full bg-primary/90 p-3 text-black backdrop-blur-md shadow-lg shadow-primary/20">
                                 {extra.icon}
@@ -1095,6 +1102,7 @@ const App: React.FC = () => {
                  ))}
               </div>
 
+              {/* Standard List of Activities */}
               {standardExtras.length > 0 && (
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-6">
                    {standardExtras.map((extra, index) => (
@@ -1125,7 +1133,7 @@ const App: React.FC = () => {
                 <p className="text-gray-400 font-bold uppercase tracking-widest">Bali, Indonesia</p>
               </div>
               <div className="border-t border-white/10 pt-6 mb-8">
-                <p className="text-gray-300 italic mb-4">"Reclaim your edge."</p>
+                <p className="text-gray-300 italic mb-4">"The reset you need."</p>
                 <p className="text-sm text-primary font-bold uppercase tracking-widest animate-pulse">Only 4 spots remaining</p>
               </div>
             </div>
@@ -1185,6 +1193,8 @@ const App: React.FC = () => {
               </div>
            </div>
         </section>
+        
+        <Pricing />
         
       </main>
       <Footer />
