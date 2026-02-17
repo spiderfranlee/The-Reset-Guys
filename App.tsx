@@ -64,7 +64,6 @@ const App: React.FC = () => {
       <Navbar />
       <main>
         <Hero />
-        <Pricing />
         <About />
         <Philosophy />
         <Team />
@@ -138,10 +137,10 @@ const App: React.FC = () => {
               <div className="mb-8">
                 <span className="inline-block bg-primary/20 text-primary px-3 py-1 rounded-full text-sm font-bold uppercase mb-2">Next Retreat</span>
                 <h3 className="text-3xl font-bold mb-2 text-white italic uppercase">November 9 - 16, 2025</h3>
-                <p className="text-gray-400 font-bold uppercase tracking-widest">Bali, Indonesia</p>
+                <p className="text-gray-400 font-bold uppercase tracking-widest">Ayia Napa, Cyprus</p>
               </div>
               <div className="border-t border-white/10 pt-6 mb-8">
-                <p className="text-gray-300 italic mb-4">"Reclaim your edge."</p>
+                <p className="text-gray-300 italic mb-4">"The reset you need."</p>
                 <p className="text-sm text-primary font-bold uppercase tracking-widest animate-pulse">Only 4 spots remaining</p>
               </div>
             </div>
@@ -201,6 +200,8 @@ const App: React.FC = () => {
               </div>
            </div>
         </section>
+
+        <Pricing />
         
       </main>
       <Footer />

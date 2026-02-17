@@ -17,33 +17,32 @@ const Team: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20">
-             {/* Guide 1 - Dev */}
+             {/* Guide 1 - Paul */}
              <div className="group">
                 <div className="relative overflow-hidden rounded-xl aspect-[3/4] mb-8 bg-dark-gray border border-white/10 group-hover:border-primary/50 transition-colors duration-500">
                    <img 
                       src="https://github.com/spiderfranlee/images/blob/main/Dev%20Profile%20Reset.png?raw=true"
-                      alt="Dev"
+                      alt="Paul"
                       className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
                    />
                    
                    <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black via-black/80 to-transparent">
-                      <h3 className="text-2xl font-bold text-white uppercase mb-1">Dev</h3>
-                      <p className="text-primary font-bold tracking-wider text-xs uppercase">Strength & Performance</p>
+                      <h3 className="text-2xl font-bold text-white uppercase mb-1">Paul</h3>
                    </div>
                 </div>
                 
                 <div className="space-y-6">
                    <p className="text-gray-400 leading-relaxed">
-                      Specializing in building bodies that can handle real life. His approach bridges the gap between elite performance and longevity. He focuses on bio-mechanics and strength standards that allow you to train hard in the gym so you can play hard on the weekends without breaking down.
+                      Paul has always looked for ways to balance a hectic Madrid social life with intense exercise and careful dieting. Lord knows it ain’t easy for a man who likes his food and a few pints or cañas with friends. Since moving to Cyprus, every day he gets a little better at aligning health with knocking the best laugh out of life. This passion for replacing friction with flow is what he brings to the table.
                    </p>
                    
                    {/* Video Trigger - Now containing the Autoplay Video */}
                    <div 
-                     onClick={() => setActiveVideo("https://github.com/spiderfranlee/images/blob/c08d3c108eb1bc5690a76da61ff6911dcc185f3b/Dev_sBioVid.mp4?raw=true")}
+                     onClick={() => setActiveVideo("https://github.com/spiderfranlee/images/blob/5fb203a0cd9432e29c939729118f6828438dfbc2/Dev_s%20Bio%20Vid.mp4?raw=true")}
                      className="relative overflow-hidden rounded-lg bg-dark-gray border border-white/10 aspect-video group/video cursor-pointer hover:border-primary/50 transition-colors shadow-lg"
                    >
                       <video 
-                        src="https://github.com/spiderfranlee/images/blob/c08d3c108eb1bc5690a76da61ff6911dcc185f3b/Dev_sBioVid.mp4?raw=true"
+                        src="https://github.com/spiderfranlee/images/blob/5fb203a0cd9432e29c939729118f6828438dfbc2/Dev_s%20Bio%20Vid.mp4?raw=true"
                         autoPlay
                         muted
                         loop
@@ -76,7 +75,6 @@ const Team: React.FC = () => {
                    
                    <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black via-black/80 to-transparent">
                       <h3 className="text-2xl font-bold text-white uppercase mb-1">Fran</h3>
-                      <p className="text-secondary font-bold tracking-wider text-xs uppercase">Recovery & Mindset</p>
                    </div>
                 </div>
                 
