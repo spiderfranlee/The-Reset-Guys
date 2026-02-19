@@ -68,15 +68,25 @@ const App: React.FC = () => {
         <Philosophy />
         <Team />
         
-        <section id="whats-included" className="py-24 bg-dark-gray border-t border-white/5">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section id="whats-included" className="py-24 relative border-t border-white/5 overflow-hidden">
+          {/* Background Image */}
+          <div className="absolute inset-0 z-0">
+            <img 
+              src="https://images.unsplash.com/photo-1580314552238-90a61852661d?q=80&w=2561&auto=format&fit=crop" 
+              alt="Cyprus Water" 
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-black/60 backdrop-blur-[2px]"></div>
+          </div>
+
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <h2 className="text-3xl md:text-4xl font-black uppercase text-white mb-12 text-center">
               What's <span className="text-primary">Included</span>
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
               {['Luxury Accommodation', 'Epic Feasts & Nutrition', 'Expert Coaching', 'Daily Recovery', 'Airport Transfers', 'Welcome Gear'].map((item) => (
-                <div key={item} className="p-6 bg-white/5 rounded-lg border border-white/5 hover:border-primary/30 transition-colors">
-                   <h3 className="font-bold text-lg text-gray-200">{item}</h3>
+                <div key={item} className="p-6 bg-black/40 backdrop-blur-md rounded-lg border border-white/10 hover:border-primary/50 transition-colors group">
+                   <h3 className="font-bold text-lg text-white group-hover:text-primary transition-colors">{item}</h3>
                 </div>
               ))}
             </div>
