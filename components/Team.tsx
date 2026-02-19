@@ -32,9 +32,21 @@ const Team: React.FC = () => {
                 </div>
                 
                 <div className="space-y-6">
-                   <p className="text-gray-400 leading-relaxed">
-                      Paul has always looked for ways to balance a hectic Madrid social life with intense exercise and careful dieting. Lord knows it ain’t easy for a man who likes his food and a few pints or cañas with friends. Since moving to Cyprus, every day he gets a little better at aligning health with knocking the best laugh out of life. This passion for replacing friction with flow is what he brings to the table.
-                   </p>
+                   <div className="text-gray-400 leading-relaxed space-y-4">
+                      <p>
+                        Paul has always looked for ways to balance a hectic Madrid social life with intense exercise and careful dieting. Lord knows it ain’t easy for a man who likes his food and a few pints or cañas with friends. Since moving to Cyprus, every day he gets a little better at aligning health with knocking the best laugh out of life. This passion for replacing friction with flow is what he brings to the table.
+                      </p>
+                      <div>
+                        <p className="font-bold text-white mb-2">He’ll never get tired of talking you through:</p>
+                        <ul className="list-disc pl-5 space-y-1">
+                          <li>Diets for real life</li>
+                          <li>Staying fit in your 40s and beyond</li>
+                          <li>Making your life fit in a backpack</li>
+                          <li>Quieting the mental noise</li>
+                          <li>Aligning fun and fitness (easier said than done)</li>
+                        </ul>
+                      </div>
+                   </div>
                    
                    {/* Video Trigger - Now containing the Autoplay Video */}
                    <div 
