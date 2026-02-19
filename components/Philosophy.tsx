@@ -8,40 +8,33 @@ const Philosophy: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           
           <div>
-            <div className="inline-block bg-primary/10 text-primary px-4 py-1.5 rounded-full text-sm font-bold uppercase tracking-wider mb-6">
-              Our Philosophy
-            </div>
             <h2 className="text-4xl md:text-5xl font-black uppercase text-white mb-6 leading-tight">
-              Stop The <br/>
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Yo-Yo Cycle</span>
+              The <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">YO-YO CYCLE</span>
             </h2>
-            <p className="text-xl text-gray-300 mb-6 leading-relaxed">
-              You’re fit, you’re successful, but you’re stuck. The "work hard, play hard" motto has turned into "work hard, recover harder."
-            </p>
-            <p className="text-gray-400 mb-8 leading-relaxed">
-              We know you. You value a great steak and a cold beer. You reject the idea of eating birdseed or going sober for a month just to feel human again. You don't need a detox; you need a <strong>circuit breaker</strong>. We provide the structure to get you back on track without stripping away the joy of living.
-            </p>
-            
-            <div className="space-y-6">
-              <div className="flex gap-4">
-                 <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-white/5 flex items-center justify-center text-primary">
-                    <Wine size={24} />
-                 </div>
-                 <div>
-                    <h3 className="text-white font-bold uppercase text-lg">Enjoy The Ride</h3>
-                    <p className="text-sm text-gray-400">We believe in earning your indulgences. Train hard in the morning so you can enjoy the sunset with a drink in hand, guilt-free.</p>
-                 </div>
-              </div>
+            <div className="space-y-4 text-lg text-gray-300 leading-relaxed">
+              <p>
+                You’re reasonably fit, you’re reasonably successful, you’re reasonably healthy.
+              </p>
+              <p>
+                So why do you feel stuck in a loop?
+              </p>
+              <p>
+                Why do you too rarely have as much to show for all the gym sessions and nutrition efforts as you feel you should?
+              </p>
+              <p>
+                Why does “work-life balance” too often feel like burning the candle at both ends.
+              </p>
+              <p>
+                Why do you feel like you’re running just to keep up? You’re disciplined but you rightfully reject the idea of eating birdseed or doing an endless sequence of diets, dry Jans and detoxes just to feel human.
+              </p>
+              <p>
+                You don't need another “health kick”; you need a circuit breaker. With our deep reset week in paradise as the paradigm-shifting turning point, we then provide the longer-term structure and support to get you aligned and focused without constantly hitting pause on the joy of living.
+              </p>
               
-              <div className="flex gap-4">
-                 <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-white/5 flex items-center justify-center text-primary">
-                    <ShieldCheck size={24} />
-                 </div>
-                 <div>
-                    <h3 className="text-white font-bold uppercase text-lg">No Extremes</h3>
-                    <p className="text-sm text-gray-400">Sustainable health isn't about 30-day challenges. It's about building systems that fit your real life.</p>
-                 </div>
-              </div>
+              <h3 className="text-xl font-bold text-white uppercase mt-8 mb-2">Onboarding and follow-up</h3>
+              <p>
+                We’re so convinced of the above that we’ll start working with you a month before you jet off and transition into follow up support after you leave the island behind. Sustainable health isn't about 7 day detoxes or even 30-day challenges. It's about building systems that finally transform aligning health and happiness into flow, not friction.
+              </p>
             </div>
           </div>
 
@@ -54,15 +47,15 @@ const Philosophy: React.FC = () => {
                 <div className="space-y-6">
                    <div className="flex items-start gap-4 p-4 bg-white/5 rounded-lg border border-white/5">
                       <Zap className="text-primary flex-shrink-0 mt-1" size={20} />
-                      <p className="text-gray-300 text-sm"><strong>The Problem:</strong> Frustrated by the cycle of overindulgence, hangovers, and missed workouts.</p>
+                      <p className="text-gray-300 text-sm"><strong>The Problem:</strong> Frustrated by the cycle of overindulgence, detoxes, and workouts motivated by “sweating it out” or “getting back on track”.</p>
                    </div>
                    <div className="flex items-start gap-4 p-4 bg-white/5 rounded-lg border border-white/5">
                       <Dumbbell className="text-primary flex-shrink-0 mt-1" size={20} />
-                      <p className="text-gray-300 text-sm"><strong>The Goal:</strong> Wanting to be fit and capable without living like a monk.</p>
+                      <p className="text-gray-300 text-sm"><strong>The Goal:</strong> Wanting to be fit and in the shape we want without living like a hermit.</p>
                    </div>
                    <div className="flex items-start gap-4 p-4 bg-primary/20 rounded-lg border border-primary/30">
                       <ShieldCheck className="text-primary flex-shrink-0 mt-1" size={20} />
-                      <p className="text-white text-sm"><strong>The Solution:</strong> A structured environment to break the bad habits and reinstall the good ones. Accountability is the key.</p>
+                      <p className="text-white text-sm"><strong>The Solution:</strong> A life-changing few days by the sea to break the bad cycles and a longer-term support system to properly install the good ones. Accountability is the key.</p>
                    </div>
                 </div>
              </div>

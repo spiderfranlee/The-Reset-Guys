@@ -9,7 +9,7 @@ const Team: React.FC = () => {
        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-black uppercase text-white mb-6">
-              Meet The <span className="text-primary">Guides</span>
+              Meet <span className="text-primary">Paul & Fran</span>
             </h2>
             <p className="text-gray-300 max-w-2xl mx-auto text-lg">
               Expert practitioners dedicated to your physical and mental evolution.

@@ -3,10 +3,6 @@ import React from 'react';
 const About: React.FC = () => {
   const highlights = [
     {
-      image: "https://github.com/spiderfranlee/images/blob/main/Cliffs%201.png?raw=true",
-      text: "Train with ocean views, using sandbags, kettlebells, and bodyweight drills just steps from the sand."
-    },
-    {
       image: "https://github.com/spiderfranlee/images/blob/main/Side%20aerial%203.png?raw=true", 
       text: "Unwind in a luxury beachfront villa, with an infinity pool & private beach access."
     },
@@ -19,10 +15,6 @@ const About: React.FC = () => {
       text: "Head off the beaten path for an epic hike through the jungle to the waterfalls of Montezuma. Think lush rainforest, natural swimming holes, and a chef-prepped picnic lunch by the falls."
     },
     {
-      image: "https://github.com/spiderfranlee/images/blob/main/Cliffs%20yoga%203.png?raw=true",
-      text: "Enjoy surf lessons at Playa Hermosa – one of Costa Rica’s most iconic beach breaks."
-    },
-    {
       image: "https://github.com/spiderfranlee/images/blob/main/yacht1.jpeg?raw=true",
       text: "Embark on a private yacht excursion to discover hidden coves and experience the coastline from a new perspective.",
       position: "object-bottom"
@@ -33,12 +25,8 @@ const About: React.FC = () => {
       position: "object-top"
     },
     {
-      image: "https://github.com/spiderfranlee/images/blob/main/Workout%20area.png?raw=true",
-      text: "Access our private, fully equipped outdoor training facility designed for functional strength and conditioning."
-    },
-    {
       image: "https://github.com/spiderfranlee/images/blob/main/IMG_7452.jpeg?raw=true",
-      text: "Experience premium living spaces designed for recovery, connection, and deep rest between sessions."
+      text: "Tried and tested by professional athletes from around the world, you’ve never experienced a workout zone like this one. Elite in every sense"
     }
   ];
 

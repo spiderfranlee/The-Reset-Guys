@@ -99,7 +99,7 @@ const Hero: React.FC = () => {
               </h2>
               
               <h1 className="text-5xl md:text-7xl lg:text-9xl font-black text-white uppercase tracking-tighter mb-8 leading-none drop-shadow-2xl">
-                Reclaim <br/> <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Your Edge</span>
+                THE RESET <br/> <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">YOU NEED</span>
               </h1>
 
               <p className="max-w-2xl mx-auto text-lg md:text-xl text-gray-300 mb-12 font-medium leading-relaxed">
@@ -135,7 +135,7 @@ const Hero: React.FC = () => {
                          <span className="text-2xl md:text-3xl xl:text-4xl font-bold text-white tracking-tight leading-none block">Play<br/>Showreel</span>
                        </div>
                      </div>
-                     <p className="text-gray-400 text-sm xl:text-base mt-0 md:mt-auto group-hover:text-white transition-colors">Watch the experience</p>
+                     <p className="text-gray-400 text-sm xl:text-base mt-0 md:mt-auto group-hover:text-white transition-colors">See what’s in store</p>
                   </div>
 
                   {/* Right Side: Autoplaying Preview */}
