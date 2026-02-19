@@ -9,9 +9,14 @@ const Footer: React.FC = () => {
           
           {/* Brand */}
           <div className="space-y-4">
-            <h3 className="text-2xl font-black italic uppercase text-white">
-              The <span className="text-primary">Reset</span> Clann
-            </h3>
+            <div className="flex flex-col items-start">
+              <span className="text-2xl font-black italic tracking-tighter text-white uppercase leading-none">
+                CIRCUIT <span className="text-primary">BREAKER</span>
+              </span>
+              <span className="text-[0.6rem] font-bold tracking-[0.2em] text-gray-400 uppercase ml-0.5">
+                by The Reset Clann
+              </span>
+            </div>
             <p className="text-gray-400 text-sm max-w-xs leading-relaxed">
               The ultimate circuit breaker for high-performers. We combine elite training with luxury downtime to help you reclaim your edge without giving up the good life.
             </p>

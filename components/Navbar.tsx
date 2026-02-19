@@ -40,10 +40,15 @@ const Navbar: React.FC = () => {
           <div className="flex-shrink-0 flex items-center">
             {/* 
               REPLACE WITH YOUR LOGO IMAGE 
-              <img src="/path/to/logo.png" alt="The Reset Clann" className="h-12" />
+              <img src="/path/to/logo.png" alt="CIRCUIT BREAKER by The Reset Clann" className="h-12" />
             */}
-            <a href="#" className="text-2xl font-black italic tracking-tighter text-white uppercase">
-              The <span className="text-primary">Reset</span> Clann
+            <a href="#" className="flex flex-col items-start group">
+              <span className="text-2xl font-black italic tracking-tighter text-white uppercase leading-none">
+                CIRCUIT <span className="text-primary">BREAKER</span>
+              </span>
+              <span className="text-[0.6rem] font-bold tracking-[0.2em] text-gray-400 uppercase group-hover:text-white transition-colors ml-0.5">
+                by The Reset Clann
+              </span>
             </a>
           </div>
 
