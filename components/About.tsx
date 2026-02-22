@@ -4,19 +4,19 @@ const About: React.FC = () => {
   const highlights = [
     {
       image: "https://github.com/spiderfranlee/images/blob/main/Side%20aerial%203.png?raw=true", 
-      text: "Unwind in a luxury beachfront villa, with an infinity pool & private beach access."
+      text: "See it to believe it: a luxury villa with a bespoke functional fitness area created specially for resetters like you"
     },
     {
       image: "https://github.com/spiderfranlee/images/blob/main/Cliffs%202.png?raw=true",
-      text: "Feast on locally-inspired cuisine, with fresh seafood, local flavors, and open-fire cooking served up by your private chef."
+      text: "Cyprus’ cobalt blue and rich terracotta are the backdrop for your Circuit Breaker retreat"
     },
     {
       image: "https://github.com/spiderfranlee/images/blob/main/Cliffs%20yoga%202.png?raw=true",
-      text: "Head off the beaten path for an epic hike through the jungle to the waterfalls of Montezuma. Think lush rainforest, natural swimming holes, and a chef-prepped picnic lunch by the falls."
+      text: "Body and mind: you know all too well a full reset won’t happen with just fitness sessions. We’ll get you rebooted inside and out, ready to bring your new alignment to every aspect of your “normal life” "
     },
     {
       image: "https://github.com/spiderfranlee/images/blob/main/yacht1.jpeg?raw=true",
-      text: "Embark on a private yacht excursion to discover hidden coves and experience the coastline from a new perspective.",
+      text: "That “how did I get here” moment on a private yacht trip  to discover hidden coves and enjoy the luxury and relaxation on the open sea, complete with snorkeling, swimming, and sunset views.",
       position: "object-bottom"
     },
     {
