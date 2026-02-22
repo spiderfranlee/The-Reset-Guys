@@ -109,17 +109,32 @@ const ChatWidget: React.FC = () => {
       let response = await chat.sendMessage({ message: userMessage });
       
       // Handle Function Calls
+      let functionCallHandled = false;
       while (response.functionCalls && response.functionCalls.length > 0) {
          const functionResponseParts = [];
          
          for (const call of response.functionCalls) {
-            console.log("Simulating Booking Tool Execution:", call.name, call.args);
-            // In a real application, you would send this data to your backend here.
+            console.log("Executing Booking Tool:", call.name, call.args);
+            
+            if (call.name === 'book_retreat') {
+               const args = call.args as any;
+               const customerName = args.customer_name || '';
+               const customerEmail = args.customer_email || '';
+               const details = args.details || '';
+               
+               // Create a mailto link to open the user's email client
+               const subject = encodeURIComponent(`New Retreat Booking Request from ${customerName}`);
+               const body = encodeURIComponent(`Name: ${customerName}\nEmail: ${customerEmail}\n\nDetails:\n${details}\n\n---\nSent via The Reset Clann Concierge`);
+               
+               // Trigger the email client
+               window.location.href = `mailto:theresetclann@gmail.com?subject=${subject}&body=${body}`;
+               functionCallHandled = true;
+            }
             
             functionResponseParts.push({
                functionResponse: {
                   name: call.name,
-                  response: { result: "Booking request received successfully." },
+                  response: { result: "Booking request prepared. The user's email client has been opened to send the request to theresetclann@gmail.com." },
                   id: call.id
                }
             });
@@ -129,7 +144,10 @@ const ChatWidget: React.FC = () => {
          response = await chat.sendMessage({ message: functionResponseParts });
       }
 
-      setMessages(prev => [...prev, { role: 'model', text: response.text || "I've noted that down." }]);
+      setMessages(prev => [...prev, { 
+        role: 'model', 
+        text: response.text || (functionCallHandled ? "I've prepared an email for you to send to our team at theresetclann@gmail.com. Please check your email client!" : "I've noted that down.") 
+      }]);
 
     } catch (error) {
       console.error("Chat Error:", error);
