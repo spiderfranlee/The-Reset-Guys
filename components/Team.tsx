@@ -33,19 +33,11 @@ const Team: React.FC = () => {
                 
                 <div className="space-y-6">
                    <div className="text-gray-400 leading-relaxed space-y-4">
-                      <p>
-                        Paul has always looked for ways to balance a hectic Madrid social life with intense exercise and careful dieting. Lord knows it ain’t easy for a man who likes his food and a few pints or cañas with friends. Since moving to Cyprus, every day he gets a little better at aligning health with knocking the best laugh out of life. This passion for replacing friction with flow is what he brings to the table.
-                      </p>
-                      <div>
-                        <p className="font-bold text-white mb-2">He’ll never get tired of talking you through:</p>
-                        <ul className="list-disc pl-5 space-y-1">
-                          <li>Diets for real life</li>
-                          <li>Staying fit in your 40s and beyond</li>
-                          <li>Making your life fit in a backpack</li>
-                          <li>Quieting the mental noise</li>
-                          <li>Aligning fun and fitness (easier said than done)</li>
-                        </ul>
-                      </div>
+                      <p><span className="font-bold text-white">The Background:</span> Always looked for ways to balance a hectic Madrid social life with intense exercise and careful dieting.</p>
+                      <p><span className="font-bold text-white">The Reality Check:</span> Lord knows it ain’t easy for a man who likes his food and a few pints or cañas with friends.</p>
+                      <p><span className="font-bold text-white">The Shift:</span> Since moving to Cyprus, every day he gets a little better at aligning health with knocking the best laugh out of life.</p>
+                      <p><span className="font-bold text-white">The Philosophy:</span> This passion for replacing friction with flow is what he brings to the table.</p>
+                      <p><span className="font-bold text-white">The Expertise:</span> He’ll never get tired of talking you through diets for real life, staying fit in your 40s and beyond, making your life fit in a backpack, quieting the mental noise, and aligning fun and fitness.</p>
                    </div>
                    
                    {/* Video Trigger - Now containing the Autoplay Video */}
@@ -104,13 +96,14 @@ const Team: React.FC = () => {
                    </div>
                    
                    {/* Video Placeholder (No video provided yet) */}
-                   <div className="relative overflow-hidden rounded-lg bg-dark-gray border border-white/10 p-4 flex items-center gap-4 group/video cursor-not-allowed opacity-50">
-                      <div className="w-12 h-12 rounded-full bg-secondary/20 flex items-center justify-center text-secondary">
-                         <Play size={20} fill="currentColor" />
-                      </div>
-                      <div className="flex-1">
-                         <p className="text-white font-bold text-sm uppercase">Watch Bio Video</p>
-                         <p className="text-xs text-gray-500">Coming Soon</p>
+                   <div className="relative overflow-hidden rounded-lg bg-dark-gray border border-white/10 aspect-video group/video cursor-not-allowed opacity-80 flex flex-col items-center justify-center shadow-lg">
+                      <div className="absolute inset-0 bg-black/40"></div>
+                      <div className="relative z-10 flex flex-col items-center">
+                         <div className="w-14 h-14 rounded-full bg-white/10 text-white/50 flex items-center justify-center shadow-lg mb-3 border border-white/10">
+                            <Play size={24} fill="currentColor" className="ml-1" />
+                         </div>
+                         <p className="text-white font-bold text-sm uppercase tracking-wider">Watch Bio Video</p>
+                         <p className="text-xs text-gray-400 mt-1 font-medium tracking-widest uppercase">Coming Soon</p>
                       </div>
                    </div>
                 </div>

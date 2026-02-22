@@ -21,7 +21,7 @@ const About: React.FC = () => {
     },
     {
       image: "https://github.com/spiderfranlee/images/blob/main/yacht2.jpeg?raw=true",
-      text: "Enjoy ultimate relaxation on the open sea, complete with snorkeling, swimming, and sunset views.",
+      text: "Luxury inside and out. A private villa to ensure proper rest completes the wellness picture. Private chef, pool, spa, masseuse… hey, you’re worth it right? ",
       position: "object-top"
     },
     {
