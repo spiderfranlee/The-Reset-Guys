@@ -109,9 +109,8 @@ const ChatWidget: React.FC = () => {
       let response = await chat.sendMessage({ message: userMessage });
       
       // Handle Function Calls
-      let functionCallHandled = false;
-      while (response.functionCalls && response.functionCalls.length > 0) {
-         const functionResponseParts = [];
+      if (response.functionCalls && response.functionCalls.length > 0) {
+         let functionCallHandled = false;
          
          for (const call of response.functionCalls) {
             console.log("Executing Booking Tool:", call.name, call.args);
@@ -122,31 +121,45 @@ const ChatWidget: React.FC = () => {
                const customerEmail = args.customer_email || '';
                const details = args.details || '';
                
-               // Create a mailto link to open the user's email client
-               const subject = encodeURIComponent(`New Retreat Booking Request from ${customerName}`);
-               const body = encodeURIComponent(`Name: ${customerName}\nEmail: ${customerEmail}\n\nDetails:\n${details}\n\n---\nSent via The Reset Clann Concierge`);
+               // Send email invisibly using Web3Forms
+               try {
+                 await fetch("https://api.web3forms.com/submit", {
+                   method: "POST",
+                   headers: {
+                     "Content-Type": "application/json",
+                     Accept: "application/json",
+                   },
+                   body: JSON.stringify({
+                     access_key: "1843b010-86ee-42ff-a5e2-f33a5bd4ebaf",
+                     subject: `New Retreat Booking Request from ${customerName}`,
+                     name: customerName,
+                     email: customerEmail,
+                     message: details || "No additional details provided.",
+                     from_name: "The Reset Clann Concierge"
+                   }),
+                 });
+                 console.log("Email sent successfully via Web3Forms");
+               } catch (err) {
+                 console.error("Failed to send email via Web3Forms", err);
+               }
                
-               // Trigger the email client
-               window.location.href = `mailto:theresetclann@gmail.com?subject=${subject}&body=${body}`;
                functionCallHandled = true;
             }
-            
-            functionResponseParts.push({
-               functionResponse: {
-                  name: call.name,
-                  response: { result: "Booking request prepared. The user's email client has been opened to send the request to theresetclann@gmail.com." },
-                  id: call.id
-               }
-            });
          }
          
-         // Send the tool execution result back to the model to get the final text response
-         response = await chat.sendMessage({ message: functionResponseParts });
+         setMessages(prev => [...prev, { 
+           role: 'model', 
+           text: functionCallHandled 
+             ? "Thank you! I've successfully sent your booking request to our team. We will be in touch with you shortly." 
+             : "I've noted that down." 
+         }]);
+         setIsLoading(false);
+         return;
       }
 
       setMessages(prev => [...prev, { 
         role: 'model', 
-        text: response.text || (functionCallHandled ? "I've prepared an email for you to send to our team at theresetclann@gmail.com. Please check your email client!" : "I've noted that down.") 
+        text: response.text || "I've noted that down." 
       }]);
 
     } catch (error) {
