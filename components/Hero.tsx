@@ -103,7 +103,7 @@ const Hero: React.FC = () => {
               </h1>
 
               <p className="max-w-2xl mx-auto text-lg md:text-xl text-gray-300 mb-12 font-medium leading-relaxed">
-                The ultimate circuit breaker. High-performance training meets high-quality downtime. Break the cycle of stress and hangovers without giving up the good life.
+                Simply put, this is the gift you’ve been wanting to give yourself. A life-changing week to finally let you realign your priorities
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
