@@ -45,7 +45,7 @@ const Philosophy: React.FC = () => {
                  Onboarding and follow-up
                </h3>
                <p className="text-gray-400 text-sm leading-relaxed">
-                 We’re so convinced of the above that we’ll start working with you a month before you jet off and transition into follow up support after you leave the island behind. Sustainable health isn't about 7 day detoxes or even 30-day challenges. It's about building systems that finally transform aligning health and happiness into flow, not friction.
+                 We’re so convinced of the above that we’ll start working with you a month before you jet off and transition into follow up support after you leave the island behind. Because you know by now that health isn't about 7 day detoxes or even 30-day challenges; It's about building systems that finally make aligning health and happiness feel like flow, not friction.
                </p>
             </div>
           </div>

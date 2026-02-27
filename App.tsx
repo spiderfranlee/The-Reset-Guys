@@ -74,7 +74,7 @@ const App: React.FC = () => {
               What's <span className="text-primary">Included</span>
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-              {['Luxury Accommodation', 'Epic Feasts & Nutrition', 'Expert Coaching', 'Daily Recovery', 'Airport Transfers', 'Welcome Gear'].map((item) => (
+              {['Luxury Accommodation', 'Epic Feasts & Nutrition', 'Expert Coaching', 'Daily Recovery', 'Airport Transfers'].map((item) => (
                 <div key={item} className="p-6 bg-gray-50 rounded-lg border border-gray-200 hover:border-primary/50 transition-colors group shadow-sm hover:shadow-md">
                    <h3 className="font-bold text-lg text-gray-900 group-hover:text-primary transition-colors">{item}</h3>
                 </div>

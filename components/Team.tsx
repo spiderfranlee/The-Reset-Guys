@@ -11,9 +11,6 @@ const Team: React.FC = () => {
             <h2 className="text-3xl md:text-4xl font-black uppercase text-white mb-6">
               Meet <span className="text-primary">Paul & Fran</span>
             </h2>
-            <p className="text-gray-300 max-w-2xl mx-auto text-lg">
-              Expert practitioners dedicated to your physical and mental evolution.
-            </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20">

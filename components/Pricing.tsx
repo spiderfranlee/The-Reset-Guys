@@ -194,9 +194,6 @@ const Pricing: React.FC = () => {
                    >
                      Book Now
                    </Button>
-                   <p className="text-center text-[10px] text-gray-600 uppercase tracking-widest mt-4 opacity-60 group-hover:opacity-100 transition-opacity">
-                      {option.totalValue}
-                   </p>
                 </div>
              </div>
           ))}
