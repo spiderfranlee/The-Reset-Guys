@@ -33,7 +33,7 @@ const Philosophy: React.FC = () => {
               </p>
               
               <p>
-                With our deep reset week in paradise as the paradigm-shifting turning point, we then provide the longer-term structure and support to get you aligned and focused without constantly hitting pause on the joy of living.
+                Pivoting on our deep reset week in paradise as your turning point, we then provide the longer-term structure and support to get you aligned and focused without constantly hitting pause on the joy of living.
               </p>
             </div>
             

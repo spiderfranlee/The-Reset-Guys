@@ -151,7 +151,7 @@ const Hero: React.FC = () => {
                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
                      <div className="absolute bottom-4 left-0 right-0 text-center">
                         <span className="text-white font-bold text-xs xl:text-sm uppercase tracking-widest flex items-center justify-center gap-2">
-                           Your Potential
+                           Your Circuit Breaker week awaits
                            <span className="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
                         </span>
                      </div>
