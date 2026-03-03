@@ -29,7 +29,7 @@ const Philosophy: React.FC = () => {
               </p>
               
               <p className="font-bold text-white text-xl">
-                You don't need another “health kick”; you need a circuit breaker.
+                You don't need another “health kick”; you need a <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">circuit breaker</span>.
               </p>
               
               <p>
