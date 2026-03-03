@@ -11,8 +11,8 @@ const About: React.FC = () => {
       text: "Cyprus’ cobalt blue and rich terracotta are the backdrop for your Circuit Breaker retreat"
     },
     {
-      image: "https://github.com/spiderfranlee/images/blob/main/Cliffs%20yoga%202.png?raw=true",
-      text: "Body and mind: you know all too well a full reset won’t happen with just fitness sessions. We’ll get you rebooted inside and out, ready to bring your new alignment to every aspect of your “normal life” "
+      image: "https://github.com/spiderfranlee/images/blob/main/IMG_7452.jpeg?raw=true",
+      text: "Tried and tested by professional athletes from around the world, you’ve never experienced a workout zone like this one. Elite in every sense"
     },
     {
       image: "https://github.com/spiderfranlee/images/blob/main/yacht1.jpeg?raw=true",
@@ -25,8 +25,8 @@ const About: React.FC = () => {
       position: "object-bottom"
     },
     {
-      image: "https://github.com/spiderfranlee/images/blob/main/IMG_7452.jpeg?raw=true",
-      text: "Tried and tested by professional athletes from around the world, you’ve never experienced a workout zone like this one. Elite in every sense"
+      image: "https://github.com/spiderfranlee/images/blob/main/Cliffs%20yoga%202.png?raw=true",
+      text: "Body and mind: you know all too well a full reset won’t happen with just fitness sessions. We’ll get you rebooted inside and out, ready to bring your new alignment to every aspect of your “normal life” "
     }
   ];
 
