@@ -87,7 +87,7 @@ const Team: React.FC = () => {
                       <p><span className="font-bold text-white">The Expertise:</span> Fully qualified PT and Strength & Conditioning Coach, continually investing in elite mentorships, biomechanics, and mindset regulation.</p>
                       <p><span className="font-bold text-white">The Philosophy:</span> Focuses on flow over friction. Believes you don't need another extreme detox or 30-day punishment to see incredible results and protect your mental health.</p>
                       <p><span className="font-bold text-white">The Approach:</span> Specializes in building bodies that can handle real life—training hard in the gym so you can play hard on the weekends without breaking down or living like a hermit.</p>
-                      <p><span className="font-bold text-white">The Mission:</span> Helping high-performers and everyday people reclaim their edge, realign their health, and stop surviving just to keep up.</p>
+                      <p><span className="font-bold text-white">The Mission:</span> Helping high-performers and everyday people reclaim their edge, realign their health, and get out of survival mode</p>
                       <p><span className="font-bold text-white">The Vibe:</span> Serious about your physical and mental evolution, but keeps the ego at the door (mandatory dad jokes included).</p>
                       <p><span className="font-bold text-white">The Dream:</span> Building a premium, like-minded community and training space where sustainable health meets the good life.</p>
                    </div>

@@ -7,7 +7,7 @@ import Team from './components/Team.tsx';
 import Pricing from './components/Pricing.tsx';
 import ChatWidget from './components/ChatWidget.tsx';
 import Footer from './components/Footer.tsx';
-import { Waves, Ship, Utensils, ShoppingBag, Music, Flower2, HeartPulse, Mountain } from 'lucide-react';
+import { Waves, Ship, Utensils, ShoppingBag, Music, Flower2, HeartPulse, Mountain, Home, Dumbbell, Plane, ChefHat, ShieldCheck } from 'lucide-react';
 
 // Main Application Container
 const App: React.FC = () => {
@@ -73,10 +73,20 @@ const App: React.FC = () => {
             <h2 className="text-3xl md:text-4xl font-black uppercase text-black mb-12 text-center">
               What's <span className="text-primary">Included</span>
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-              {['Luxury Accommodation', 'Epic Feasts & Nutrition', 'Expert Coaching', 'Daily Recovery', 'Airport Transfers', 'Private Chef'].map((item) => (
-                <div key={item} className="p-6 bg-gray-50 rounded-lg border border-gray-200 hover:border-primary/50 transition-colors group shadow-sm hover:shadow-md">
-                   <h3 className="font-bold text-lg text-gray-900 group-hover:text-primary transition-colors">{item}</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {[
+                { title: 'Luxury Accommodation', icon: <Home size={28} /> },
+                { title: 'Onboarding and follow-up support', icon: <ShieldCheck size={28} /> },
+                { title: 'Expert Coaching', icon: <Dumbbell size={28} /> },
+                { title: 'Daily Recovery', icon: <HeartPulse size={28} /> },
+                { title: 'Airport Transfers', icon: <Plane size={28} /> },
+                { title: 'Private Chef', icon: <ChefHat size={28} /> }
+              ].map((item, index) => (
+                <div key={index} className="flex items-center gap-6 p-6 bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl hover:border-primary/30 transition-all duration-300 group transform hover:-translate-y-1">
+                   <div className="flex-shrink-0 w-14 h-14 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 group-hover:bg-primary/10 group-hover:text-primary transition-colors">
+                      {item.icon}
+                   </div>
+                   <h3 className="font-bold text-lg text-gray-900 group-hover:text-primary transition-colors">{item.title}</h3>
                 </div>
               ))}
             </div>

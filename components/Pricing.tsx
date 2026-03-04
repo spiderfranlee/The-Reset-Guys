@@ -38,49 +38,68 @@ const Pricing: React.FC = () => {
 
   const options = [
     {
-      title: '4 Person Room Share',
-      subtitle: '4 Spots Available',
-      price: '€2,199',
-      originalPrice: '€2,599',
-      per: '/ person',
-      totalValue: 'Total Room Value: €8,796',
+      title: 'PREMIUM VILLA SUITE',
+      subtitle: '🟢 1 ROOM AVAILABLE',
+      price: '€3,000',
+      originalPrice: '€3,510',
+      per: '/ ROOM',
+      saveText: 'OR €1,755 / PERSON SHARING',
+      deposit: '⚡ Secure your luxury spot! Just a €350 deposit today.',
       features: [
-        'Shared Luxury Suite',
-        '4 Single Beds / Bunks',
+        'XL Luxury Room',
+        '1 Double Bed',
         'En-suite Bathroom',
-        'Garden View'
-      ],
-      highlight: false
-    },
-    {
-      title: 'Private Room Share',
-      subtitle: '4 Spots Available',
-      price: '€2,499',
-      originalPrice: '€2,899',
-      per: '/ person',
-      totalValue: 'Total Room Value: €9,996',
-      features: [
-        'Private Luxury Room',
-        'King Size Bed',
-        'Shared Villa Common Areas',
-        'Ocean Peek View'
-      ],
-      highlight: false
-    },
-    {
-      title: 'Ultimate Solo Private',
-      subtitle: '4 Spots Available',
-      price: '€2,999',
-      originalPrice: '€3,399',
-      per: '/ person',
-      totalValue: 'Total Room Value: €11,996',
-      features: [
-        'Entire Private Suite',
-        'Private Balcony',
-        'Premium Ocean View',
-        'Priority Booking'
+        'Shared 1st Floor Terrace'
       ],
       highlight: true
+    },
+    {
+      title: 'PRIVATE EN-SUITE ROOM',
+      subtitle: '🟢 5 ROOMS AVAILABLE',
+      price: '€2,200',
+      originalPrice: '€2,574',
+      per: '/ ROOM',
+      saveText: 'OR €1,287 / PERSON SHARING',
+      deposit: '⚡ Lock in your fitness getaway! Just a €350 deposit today.',
+      features: [
+        'Private Room',
+        '1 Double Bed',
+        'En-suite Bathroom',
+        'Patio / Garden Access'
+      ],
+      highlight: false
+    },
+    {
+      title: 'BUNGALOW (GROUP SHARE)',
+      subtitle: '🟢 2 ROOMS AVAILABLE',
+      price: '€4,000',
+      originalPrice: '€4,680',
+      per: '/ ROOM',
+      saveText: 'OR €1,170 / PERSON SHARING',
+      deposit: '⚡ Bring the crew! Just a €350 deposit per person today.',
+      features: [
+        '2 Double Beds',
+        '4 People Sharing',
+        'En-suite Bathroom',
+        'Perfect for groups'
+      ],
+      highlight: false
+    },
+    {
+      title: 'SHARED BATHROOM VILLA',
+      subtitle: '🟢 2 ROOMS AVAILABLE',
+      price: '€2,200',
+      originalPrice: '€2,574',
+      per: '/ ROOM',
+      saveText: 'OR €1,287 / PERSON SHARING',
+      deposit: '⚡ Reserve your space! Just a €350 deposit today.',
+      features: [
+        '1 Double Bed',
+        'Shared Hot Tub Access',
+        'Shared 1st Floor Terrace',
+        'Shared Bathroom'
+      ],
+      highlight: false
     }
   ];
 
@@ -137,7 +156,7 @@ const Pricing: React.FC = () => {
            </div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 items-start">
           {options.map((option, index) => (
              <div 
                key={index} 
@@ -169,8 +188,13 @@ const Pricing: React.FC = () => {
                         <span className="text-gray-500 ml-2 text-sm font-medium uppercase">{option.per}</span>
                       </div>
                       <span className="text-primary text-xs font-bold uppercase tracking-wider mt-2 bg-primary/10 px-2 py-1 rounded">
-                        Save €400
+                        {option.saveText}
                       </span>
+                      {option.deposit && (
+                        <span className="text-gray-400 text-xs font-medium mt-2">
+                          {option.deposit}
+                        </span>
+                      )}
                    </div>
                 </div>
 
