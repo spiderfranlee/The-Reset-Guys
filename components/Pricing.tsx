@@ -213,7 +213,7 @@ const Pricing: React.FC = () => {
                    <Button 
                      variant={option.highlight ? 'primary' : 'outline'} 
                      fullWidth 
-                     onClick={() => document.getElementById('contact')?.scrollIntoView({behavior: 'smooth'})}
+                     onClick={() => window.open('https://checkout.revolut.com/pay/a65ebcc8-93ae-4e6b-905a-657b2cbcb4c6', '_blank')}
                      className={option.highlight ? 'shadow-lg shadow-primary/20' : ''}
                    >
                      Book Now
