@@ -148,10 +148,6 @@ const Pricing: React.FC = () => {
                     </div>
                   ))}
                 </div>
-                
-                <p className="mt-6 text-primary font-bold uppercase tracking-wider text-sm md:text-base animate-pulse">
-                  ⚡ Save €400 until March 31st
-                </p>
               </div>
            </div>
         </div>
