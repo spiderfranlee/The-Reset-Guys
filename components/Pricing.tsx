@@ -222,6 +222,117 @@ const Pricing: React.FC = () => {
              </div>
           ))}
         </div>
+        
+        {/* Villa Images Section */}
+        <div className="mt-24 pt-16 border-t border-white/10">
+          <div className="text-center mb-12">
+            <h3 className="text-2xl md:text-4xl font-black uppercase text-white mb-4">
+              Inside <span className="text-primary">The Rooms</span>
+            </h3>
+            <p className="text-gray-400 max-w-2xl mx-auto">
+              Take a look at the luxury accommodations waiting for you. Please confirm if you have a room preference.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="group relative overflow-hidden rounded-2xl aspect-[4/3] border border-white/10">
+              <img 
+                src="https://github.com/spiderfranlee/images/blob/main/Cape%20Serenity%20Room%201.png?raw=true" 
+                alt="Cape Serenity Room 1" 
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                referrerPolicy="no-referrer"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300"></div>
+              <div className="absolute top-4 right-4 bg-green-500/90 text-white text-xs font-bold uppercase tracking-widest py-1.5 px-3 rounded-full shadow-lg backdrop-blur-sm flex items-center gap-1.5">
+                <span className="w-2 h-2 rounded-full bg-white animate-pulse"></span>
+                Available
+              </div>
+              <div className="absolute bottom-4 left-4 right-4">
+                <h4 className="text-xl font-bold text-white">Cape Serenity Room 1</h4>
+              </div>
+            </div>
+            <div className="group relative overflow-hidden rounded-2xl aspect-[4/3] border border-white/10">
+              <img 
+                src="https://github.com/spiderfranlee/images/blob/main/Cape%20Serenity%20Room%202.png?raw=true" 
+                alt="Cape Serenity Room 2" 
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                referrerPolicy="no-referrer"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300"></div>
+              <div className="absolute top-4 right-4 bg-green-500/90 text-white text-xs font-bold uppercase tracking-widest py-1.5 px-3 rounded-full shadow-lg backdrop-blur-sm flex items-center gap-1.5">
+                <span className="w-2 h-2 rounded-full bg-white animate-pulse"></span>
+                Available
+              </div>
+              <div className="absolute bottom-4 left-4 right-4">
+                <h4 className="text-xl font-bold text-white">Cape Serenity Room 2</h4>
+              </div>
+            </div>
+            <div className="group relative overflow-hidden rounded-2xl aspect-[4/3] border border-white/10">
+              <img 
+                src="https://github.com/spiderfranlee/images/blob/main/Cape%20Serenity%20Room%203.png?raw=true" 
+                alt="Cape Serenity Room 3" 
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                referrerPolicy="no-referrer"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300"></div>
+              <div className="absolute top-4 right-4 bg-green-500/90 text-white text-xs font-bold uppercase tracking-widest py-1.5 px-3 rounded-full shadow-lg backdrop-blur-sm flex items-center gap-1.5">
+                <span className="w-2 h-2 rounded-full bg-white animate-pulse"></span>
+                Available
+              </div>
+              <div className="absolute bottom-4 left-4 right-4">
+                <h4 className="text-xl font-bold text-white">Cape Serenity Room 3</h4>
+              </div>
+            </div>
+            <div className="group relative overflow-hidden rounded-2xl aspect-[4/3] border border-white/10">
+              <img 
+                src="https://github.com/spiderfranlee/images/blob/main/Cape%20Serenity%20Room%204.png?raw=true" 
+                alt="Cape Serenity Room 4" 
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                referrerPolicy="no-referrer"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300"></div>
+              <div className="absolute top-4 right-4 bg-green-500/90 text-white text-xs font-bold uppercase tracking-widest py-1.5 px-3 rounded-full shadow-lg backdrop-blur-sm flex items-center gap-1.5">
+                <span className="w-2 h-2 rounded-full bg-white animate-pulse"></span>
+                Available
+              </div>
+              <div className="absolute bottom-4 left-4 right-4">
+                <h4 className="text-xl font-bold text-white">Cape Serenity Room 4</h4>
+              </div>
+            </div>
+            <div className="group relative overflow-hidden rounded-2xl aspect-[4/3] border border-white/10">
+              <img 
+                src="https://github.com/spiderfranlee/images/blob/main/Cape%20Serenity%20Room%205.png?raw=true" 
+                alt="Cape Serenity Room 5" 
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                referrerPolicy="no-referrer"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300"></div>
+              <div className="absolute top-4 right-4 bg-green-500/90 text-white text-xs font-bold uppercase tracking-widest py-1.5 px-3 rounded-full shadow-lg backdrop-blur-sm flex items-center gap-1.5">
+                <span className="w-2 h-2 rounded-full bg-white animate-pulse"></span>
+                Available
+              </div>
+              <div className="absolute bottom-4 left-4 right-4">
+                <h4 className="text-xl font-bold text-white">Cape Serenity Room 5</h4>
+              </div>
+            </div>
+            <div className="group relative overflow-hidden rounded-2xl aspect-[4/3] border border-white/10">
+              <img 
+                src="https://github.com/spiderfranlee/images/blob/main/Cape%20Serenity%20Room%206.png?raw=true" 
+                alt="Cape Serenity Room 6" 
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                referrerPolicy="no-referrer"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300"></div>
+              <div className="absolute top-4 right-4 bg-green-500/90 text-white text-xs font-bold uppercase tracking-widest py-1.5 px-3 rounded-full shadow-lg backdrop-blur-sm flex items-center gap-1.5">
+                <span className="w-2 h-2 rounded-full bg-white animate-pulse"></span>
+                Available
+              </div>
+              <div className="absolute bottom-4 left-4 right-4">
+                <h4 className="text-xl font-bold text-white">Cape Serenity Room 6</h4>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
