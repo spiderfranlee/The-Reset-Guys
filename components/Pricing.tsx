@@ -54,7 +54,7 @@ const Pricing: React.FC = () => {
       highlight: true
     },
     {
-      title: 'PRIVATE EN-SUITE ROOM',
+      title: 'BUNGALOW VILLA',
       subtitle: '🟢 5 ROOMS AVAILABLE',
       price: '€2,200',
       originalPrice: '€2,574',
@@ -86,7 +86,7 @@ const Pricing: React.FC = () => {
       highlight: false
     },
     {
-      title: 'SHARED BATHROOM VILLA',
+      title: 'VILLA ROOM (Shared Bathroom)',
       subtitle: '🟢 2 ROOMS AVAILABLE',
       price: '€2,200',
       originalPrice: '€2,574',
