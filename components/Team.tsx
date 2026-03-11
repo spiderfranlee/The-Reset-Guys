@@ -69,7 +69,7 @@ const Team: React.FC = () => {
              <div className="group">
                 <div className="relative overflow-hidden rounded-xl aspect-[3/4] mb-8 bg-dark-gray border border-white/10 group-hover:border-secondary/50 transition-colors duration-500">
                    <img 
-                      src="https://github.com/spiderfranlee/images/blob/main/Fran%20Reset%20Pic.png?raw=true" 
+                      src="https://github.com/spiderfranlee/images/blob/main/Fran%20Bio%20Pic.png?raw=true" 
                       alt="Fran"
                       className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
                    />
