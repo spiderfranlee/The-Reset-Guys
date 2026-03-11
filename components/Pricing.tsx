@@ -220,7 +220,7 @@ const Pricing: React.FC = () => {
         </div>
         
         {/* Villa Images Section */}
-        <div className="mt-24 pt-16 border-t border-white/10">
+        <div id="the-villa" className="mt-24 pt-16 border-t border-white/10 scroll-mt-24">
           <div className="text-center mb-12">
             <h3 className="text-2xl md:text-4xl font-black uppercase text-white mb-4">
               Inside <span className="text-primary">The Rooms</span>
@@ -239,8 +239,8 @@ const Pricing: React.FC = () => {
                 referrerPolicy="no-referrer"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300"></div>
-              <div className="absolute top-4 right-4 bg-green-500/90 text-white text-xs font-bold uppercase tracking-widest py-1.5 px-3 rounded-full shadow-lg backdrop-blur-sm flex items-center gap-1.5">
-                <span className="w-2 h-2 rounded-full bg-white animate-pulse"></span>
+              <div className="absolute top-4 right-4 bg-primary/90 text-black text-xs font-bold uppercase tracking-widest py-1.5 px-3 rounded-full shadow-lg backdrop-blur-sm flex items-center gap-1.5">
+                <span className="w-2 h-2 rounded-full bg-black animate-pulse"></span>
                 Available
               </div>
               <div className="absolute bottom-4 left-4 right-4">
@@ -255,8 +255,8 @@ const Pricing: React.FC = () => {
                 referrerPolicy="no-referrer"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300"></div>
-              <div className="absolute top-4 right-4 bg-green-500/90 text-white text-xs font-bold uppercase tracking-widest py-1.5 px-3 rounded-full shadow-lg backdrop-blur-sm flex items-center gap-1.5">
-                <span className="w-2 h-2 rounded-full bg-white animate-pulse"></span>
+              <div className="absolute top-4 right-4 bg-primary/90 text-black text-xs font-bold uppercase tracking-widest py-1.5 px-3 rounded-full shadow-lg backdrop-blur-sm flex items-center gap-1.5">
+                <span className="w-2 h-2 rounded-full bg-black animate-pulse"></span>
                 Available
               </div>
               <div className="absolute bottom-4 left-4 right-4">
@@ -271,8 +271,8 @@ const Pricing: React.FC = () => {
                 referrerPolicy="no-referrer"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300"></div>
-              <div className="absolute top-4 right-4 bg-green-500/90 text-white text-xs font-bold uppercase tracking-widest py-1.5 px-3 rounded-full shadow-lg backdrop-blur-sm flex items-center gap-1.5">
-                <span className="w-2 h-2 rounded-full bg-white animate-pulse"></span>
+              <div className="absolute top-4 right-4 bg-primary/90 text-black text-xs font-bold uppercase tracking-widest py-1.5 px-3 rounded-full shadow-lg backdrop-blur-sm flex items-center gap-1.5">
+                <span className="w-2 h-2 rounded-full bg-black animate-pulse"></span>
                 Available
               </div>
               <div className="absolute bottom-4 left-4 right-4">
@@ -287,8 +287,8 @@ const Pricing: React.FC = () => {
                 referrerPolicy="no-referrer"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300"></div>
-              <div className="absolute top-4 right-4 bg-green-500/90 text-white text-xs font-bold uppercase tracking-widest py-1.5 px-3 rounded-full shadow-lg backdrop-blur-sm flex items-center gap-1.5">
-                <span className="w-2 h-2 rounded-full bg-white animate-pulse"></span>
+              <div className="absolute top-4 right-4 bg-primary/90 text-black text-xs font-bold uppercase tracking-widest py-1.5 px-3 rounded-full shadow-lg backdrop-blur-sm flex items-center gap-1.5">
+                <span className="w-2 h-2 rounded-full bg-black animate-pulse"></span>
                 Available
               </div>
               <div className="absolute bottom-4 left-4 right-4">
@@ -303,8 +303,8 @@ const Pricing: React.FC = () => {
                 referrerPolicy="no-referrer"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300"></div>
-              <div className="absolute top-4 right-4 bg-green-500/90 text-white text-xs font-bold uppercase tracking-widest py-1.5 px-3 rounded-full shadow-lg backdrop-blur-sm flex items-center gap-1.5">
-                <span className="w-2 h-2 rounded-full bg-white animate-pulse"></span>
+              <div className="absolute top-4 right-4 bg-primary/90 text-black text-xs font-bold uppercase tracking-widest py-1.5 px-3 rounded-full shadow-lg backdrop-blur-sm flex items-center gap-1.5">
+                <span className="w-2 h-2 rounded-full bg-black animate-pulse"></span>
                 Available
               </div>
               <div className="absolute bottom-4 left-4 right-4">
@@ -319,12 +319,76 @@ const Pricing: React.FC = () => {
                 referrerPolicy="no-referrer"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300"></div>
-              <div className="absolute top-4 right-4 bg-green-500/90 text-white text-xs font-bold uppercase tracking-widest py-1.5 px-3 rounded-full shadow-lg backdrop-blur-sm flex items-center gap-1.5">
-                <span className="w-2 h-2 rounded-full bg-white animate-pulse"></span>
+              <div className="absolute top-4 right-4 bg-primary/90 text-black text-xs font-bold uppercase tracking-widest py-1.5 px-3 rounded-full shadow-lg backdrop-blur-sm flex items-center gap-1.5">
+                <span className="w-2 h-2 rounded-full bg-black animate-pulse"></span>
                 Available
               </div>
               <div className="absolute bottom-4 left-4 right-4">
                 <h4 className="text-xl font-bold text-white">Cape Serenity Room 6</h4>
+              </div>
+            </div>
+            <div className="group relative overflow-hidden rounded-2xl aspect-[4/3] border border-white/10">
+              <img 
+                src="https://github.com/spiderfranlee/images/blob/main/Villa%20Premium%20Room%20Pool%20View.png?raw=true" 
+                alt="Villa Premium Room with Pool View" 
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                referrerPolicy="no-referrer"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300"></div>
+              <div className="absolute top-4 right-4 bg-primary/90 text-black text-xs font-bold uppercase tracking-widest py-1.5 px-3 rounded-full shadow-lg backdrop-blur-sm flex items-center gap-1.5">
+                <span className="w-2 h-2 rounded-full bg-black animate-pulse"></span>
+                Available
+              </div>
+              <div className="absolute bottom-4 left-4 right-4">
+                <h4 className="text-xl font-bold text-white">Villa Premium Room with Pool View</h4>
+              </div>
+            </div>
+            <div className="group relative overflow-hidden rounded-2xl aspect-[4/3] border border-white/10">
+              <img 
+                src="https://github.com/spiderfranlee/images/blob/main/Villa%20Shared%20Bathroom%20Green%20Room.png?raw=true" 
+                alt="Villa Green Room with Shared bathroom" 
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                referrerPolicy="no-referrer"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300"></div>
+              <div className="absolute top-4 right-4 bg-primary/90 text-black text-xs font-bold uppercase tracking-widest py-1.5 px-3 rounded-full shadow-lg backdrop-blur-sm flex items-center gap-1.5">
+                <span className="w-2 h-2 rounded-full bg-black animate-pulse"></span>
+                Available
+              </div>
+              <div className="absolute bottom-4 left-4 right-4">
+                <h4 className="text-xl font-bold text-white">Villa Green Room with Shared bathroom</h4>
+              </div>
+            </div>
+            <div className="group relative overflow-hidden rounded-2xl aspect-[4/3] border border-white/10">
+              <img 
+                src="https://github.com/spiderfranlee/images/blob/main/Villa%20Shared%20Bathroom.png?raw=true" 
+                alt="The Shared Bathroom for Villa rooms Black and Green" 
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                referrerPolicy="no-referrer"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300"></div>
+              <div className="absolute top-4 right-4 bg-primary/90 text-black text-xs font-bold uppercase tracking-widest py-1.5 px-3 rounded-full shadow-lg backdrop-blur-sm flex items-center gap-1.5">
+                <span className="w-2 h-2 rounded-full bg-black animate-pulse"></span>
+                Available
+              </div>
+              <div className="absolute bottom-4 left-4 right-4">
+                <h4 className="text-xl font-bold text-white">Shared Bathroom for Black & Green Rooms</h4>
+              </div>
+            </div>
+            <div className="group relative overflow-hidden rounded-2xl aspect-[4/3] border border-white/10">
+              <img 
+                src="https://github.com/spiderfranlee/images/blob/main/Villa%20Black%20Room%20with%20Shared%20bathroom.png?raw=true" 
+                alt="The Villa Black Room with Shared bathroom" 
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                referrerPolicy="no-referrer"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300"></div>
+              <div className="absolute top-4 right-4 bg-primary/90 text-black text-xs font-bold uppercase tracking-widest py-1.5 px-3 rounded-full shadow-lg backdrop-blur-sm flex items-center gap-1.5">
+                <span className="w-2 h-2 rounded-full bg-black animate-pulse"></span>
+                Available
+              </div>
+              <div className="absolute bottom-4 left-4 right-4">
+                <h4 className="text-xl font-bold text-white">Villa Black Room with Shared bathroom</h4>
               </div>
             </div>
           </div>
