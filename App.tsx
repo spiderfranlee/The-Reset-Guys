@@ -16,7 +16,7 @@ const App: React.FC = () => {
     { 
       icon: <Waves className="text-primary" size={24} />, 
       title: "Sunrise Stand-Up Paddle (SUP)",
-      image: "https://github.com/spiderfranlee/images/blob/main/Paddle.png?raw=true"
+      image: "https://media.theresetclann.com/Paddle.png"
     },
     { 
       icon: <Ship className="text-primary" size={24} />, 
@@ -36,12 +36,12 @@ const App: React.FC = () => {
     { 
       icon: <Flower2 className="text-primary" size={24} />, 
       title: "Yoga Session",
-      image: "https://www.theresetclann.com/Cliffs%202.png"
+      image: "https://media.theresetclann.com/Cliffs%202.png"
     },
     { 
       icon: <Music className="text-primary" size={24} />, 
       title: "Poolside Sunset Live Music & Open Bar",
-      image: "https://github.com/spiderfranlee/images/blob/main/Poolside%20bar.png?raw=true"
+      image: "https://media.theresetclann.com/Poolside%20bar.png"
     },
     { 
       icon: <HeartPulse className="text-primary" size={24} />, 
@@ -52,7 +52,7 @@ const App: React.FC = () => {
     { 
       icon: <Mountain className="text-primary" size={24} />, 
       title: "Cliff Jumps",
-      image: "https://github.com/spiderfranlee/images/blob/main/Cliffs%20jumps.png?raw=true"
+      image: "https://media.theresetclann.com/Cliffs%20jumps.png"
     },
   ];
 

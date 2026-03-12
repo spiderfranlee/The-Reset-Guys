@@ -3,11 +3,11 @@ import React from 'react';
 const About: React.FC = () => {
   const highlights = [
     {
-      image: "https://github.com/spiderfranlee/images/blob/main/Side%20aerial%203.png?raw=true", 
+      image: "https://media.theresetclann.com/Side%20aerial%203.png", 
       text: "See it to believe it: a luxury villa with a bespoke functional fitness area created specially for resetters like you"
     },
     {
-      image: "https://www.theresetclann.com/Cliffs%202.png",
+      image: "https://media.theresetclann.com/Cliffs%202.png",
       text: "Cyprus’ cobalt blue and rich terracotta are the backdrop for your Circuit Breaker retreat"
     },
     {
@@ -25,7 +25,7 @@ const About: React.FC = () => {
       position: "object-bottom"
     },
     {
-      image: "https://github.com/spiderfranlee/images/blob/main/Cliffs%20yoga%202.png?raw=true",
+      image: "https://media.theresetclann.com/Cliffs%20yoga%202.png",
       text: "Body and mind: you know all too well a full reset won’t happen with just fitness sessions. We’ll get you rebooted inside and out, ready to bring your new alignment to every aspect of your “normal life” "
     }
   ];
