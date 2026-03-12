@@ -233,7 +233,7 @@ const Pricing: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="group relative overflow-hidden rounded-2xl aspect-[4/3] border border-white/10">
               <img 
-                src="https://github.com/spiderfranlee/images/blob/main/Cape%20Serenity%20Room%201.png?raw=true" 
+                src="https://media.theresetclann.com/Cape%20Serenity%20Room%201.png" 
                 alt="Cape Serenity Room 1" 
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 referrerPolicy="no-referrer"
@@ -249,7 +249,7 @@ const Pricing: React.FC = () => {
             </div>
             <div className="group relative overflow-hidden rounded-2xl aspect-[4/3] border border-white/10">
               <img 
-                src="https://github.com/spiderfranlee/images/blob/main/Cape%20Serenity%20Room%202.png?raw=true" 
+                src="https://media.theresetclann.com/Cape%20Serenity%20Room%202.png" 
                 alt="Cape Serenity Room 2" 
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 referrerPolicy="no-referrer"
@@ -265,7 +265,7 @@ const Pricing: React.FC = () => {
             </div>
             <div className="group relative overflow-hidden rounded-2xl aspect-[4/3] border border-white/10">
               <img 
-                src="https://github.com/spiderfranlee/images/blob/main/Cape%20Serenity%20Room%203.png?raw=true" 
+                src="https://media.theresetclann.com/Cape%20Serenity%20Room%203.png" 
                 alt="Cape Serenity Room 3" 
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 referrerPolicy="no-referrer"
@@ -281,7 +281,7 @@ const Pricing: React.FC = () => {
             </div>
             <div className="group relative overflow-hidden rounded-2xl aspect-[4/3] border border-white/10">
               <img 
-                src="https://github.com/spiderfranlee/images/blob/main/Cape%20Serenity%20Room%204.png?raw=true" 
+                src="https://media.theresetclann.com/Cape%20Serenity%20Room%204.png" 
                 alt="Cape Serenity Room 4" 
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 referrerPolicy="no-referrer"
@@ -297,7 +297,7 @@ const Pricing: React.FC = () => {
             </div>
             <div className="group relative overflow-hidden rounded-2xl aspect-[4/3] border border-white/10">
               <img 
-                src="https://github.com/spiderfranlee/images/blob/main/Cape%20Serenity%20Room%205.png?raw=true" 
+                src="https://media.theresetclann.com/Cape%20Serenity%20Room%205.png" 
                 alt="Cape Serenity Room 5" 
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 referrerPolicy="no-referrer"
@@ -313,7 +313,7 @@ const Pricing: React.FC = () => {
             </div>
             <div className="group relative overflow-hidden rounded-2xl aspect-[4/3] border border-white/10">
               <img 
-                src="https://github.com/spiderfranlee/images/blob/main/Cape%20Serenity%20Room%206.png?raw=true" 
+                src="https://media.theresetclann.com/Cape%20Serenity%20Room%206.png" 
                 alt="Cape Serenity Room 6" 
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 referrerPolicy="no-referrer"
@@ -329,7 +329,7 @@ const Pricing: React.FC = () => {
             </div>
             <div className="group relative overflow-hidden rounded-2xl aspect-[4/3] border border-white/10">
               <img 
-                src="https://github.com/spiderfranlee/images/blob/main/Villa%20Premium%20Room%20Pool%20View.png?raw=true" 
+                src="https://media.theresetclann.com/Villa%20Premium%20Room%20Pool%20View.png" 
                 alt="Villa Premium Room with Pool View" 
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 referrerPolicy="no-referrer"
@@ -345,7 +345,7 @@ const Pricing: React.FC = () => {
             </div>
             <div className="group relative overflow-hidden rounded-2xl aspect-[4/3] border border-white/10">
               <img 
-                src="https://github.com/spiderfranlee/images/blob/main/Villa%20Shared%20Bathroom%20Green%20Room.png?raw=true" 
+                src="https://media.theresetclann.com/Villa%20Shared%20Bathroom%20Green%20Room.png" 
                 alt="Villa Green Room with Shared bathroom" 
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 referrerPolicy="no-referrer"
@@ -361,7 +361,7 @@ const Pricing: React.FC = () => {
             </div>
             <div className="group relative overflow-hidden rounded-2xl aspect-[4/3] border border-white/10">
               <img 
-                src="https://github.com/spiderfranlee/images/blob/main/Villa%20Shared%20Bathroom.png?raw=true" 
+                src="https://media.theresetclann.com/Villa%20Shared%20Bathroom.png" 
                 alt="The Shared Bathroom for Villa rooms Black and Green" 
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 referrerPolicy="no-referrer"
@@ -377,7 +377,7 @@ const Pricing: React.FC = () => {
             </div>
             <div className="group relative overflow-hidden rounded-2xl aspect-[4/3] border border-white/10">
               <img 
-                src="https://github.com/spiderfranlee/images/blob/main/Villa%20Black%20Room%20with%20Shared%20bathroom.png?raw=true" 
+                src="https://media.theresetclann.com/Villa%20Shared%20Bathroom%20Black%20Room.png" 
                 alt="The Villa Black Room with Shared bathroom" 
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 referrerPolicy="no-referrer"
