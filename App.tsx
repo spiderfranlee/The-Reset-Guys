@@ -21,17 +21,17 @@ const App: React.FC = () => {
     { 
       icon: <Ship className="text-primary" size={24} />, 
       title: "Private Yacht Excursion",
-      image: "https://github.com/spiderfranlee/images/blob/main/Cliff%20jumping.png?raw=true"
+      image: "https://media.theresetclann.com/Cliffs%20jumps.png"
     },
     { 
       icon: <ShoppingBag className="text-primary" size={24} />, 
       title: "\"Farm-to-Home\" Local Market Visit",
-      image: "https://github.com/spiderfranlee/images/blob/main/Market.png?raw=true"
+      image: "https://media.theresetclann.com/Market.png"
     },
     { 
       icon: <Utensils className="text-primary" size={24} />, 
       title: "Traditional Culture & Halloumi Tasting Tour",
-      image: "https://github.com/spiderfranlee/images/blob/main/Hallo.png?raw=true"
+      image: "https://media.theresetclann.com/Hallo.png"
     },
     { 
       icon: <Flower2 className="text-primary" size={24} />, 
@@ -47,7 +47,7 @@ const App: React.FC = () => {
       icon: <HeartPulse className="text-primary" size={24} />, 
       title: "Massage or Rehab Treatment", 
       desc: "Includes Sauna, Ice bath & Jacuzzi",
-      image: "https://github.com/spiderfranlee/images/blob/main/massage.jpeg?raw=true"
+      image: "https://media.theresetclann.com/massage.jpeg"
     },
     { 
       icon: <Mountain className="text-primary" size={24} />, 
