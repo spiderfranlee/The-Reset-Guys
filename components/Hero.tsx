@@ -15,12 +15,12 @@ const Hero: React.FC = () => {
   };
 
   const highlightImages = [
-    "https://github.com/spiderfranlee/images/blob/main/Cliffs%201.png?raw=true",
-    "https://media.theresetclann.com/Cliffs%202.png",
-    "https://media.theresetclann.com/Cliffs%20yoga%202.png",
-    "https://github.com/spiderfranlee/images/blob/main/Cliffs%20yoga%203.png?raw=true",
-    "https://github.com/spiderfranlee/images/blob/main/yacht1.jpeg?raw=true",
-    "https://github.com/spiderfranlee/images/blob/main/yacht2.jpeg?raw=true"
+    "https://media.theresetclann.com/Aerial%20Shot.png",
+    "https://media.theresetclann.com/Chef.png",
+    "https://media.theresetclann.com/Cliffs%201.png",
+    "https://media.theresetclann.com/Cliffs%20yoga%203.png",
+    "https://media.theresetclann.com/IMG_7596.jpeg",
+    "https://media.theresetclann.com/Villas.jpeg"
   ];
 
   // Autoplay for the small preview card
