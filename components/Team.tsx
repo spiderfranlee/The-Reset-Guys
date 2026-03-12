@@ -39,11 +39,11 @@ const Team: React.FC = () => {
                    
                    {/* Video Trigger - Now containing the Autoplay Video */}
                    <div 
-                     onClick={() => setActiveVideo("https://github.com/spiderfranlee/images/blob/5fb203a0cd9432e29c939729118f6828438dfbc2/Dev_s%20Bio%20Vid.mp4?raw=true")}
+                     onClick={() => setActiveVideo("https://media.theresetclann.com/Dev_s%20Bio%20Vid.mp4")}
                      className="relative overflow-hidden rounded-lg bg-dark-gray border border-white/10 aspect-video group/video cursor-pointer hover:border-primary/50 transition-colors shadow-lg"
                    >
                       <video 
-                        src="https://github.com/spiderfranlee/images/blob/5fb203a0cd9432e29c939729118f6828438dfbc2/Dev_s%20Bio%20Vid.mp4?raw=true"
+                        src="https://media.theresetclann.com/Dev_s%20Bio%20Vid.mp4"
                         autoPlay
                         muted
                         loop
