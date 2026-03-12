@@ -36,7 +36,7 @@ const App: React.FC = () => {
     { 
       icon: <Flower2 className="text-primary" size={24} />, 
       title: "Yoga Session",
-      image: "https://github.com/spiderfranlee/images/blob/main/Cliffs%202.png?raw=true"
+      image: "https://www.theresetclann.com/Cliffs%202.png"
     },
     { 
       icon: <Music className="text-primary" size={24} />, 

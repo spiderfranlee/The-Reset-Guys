@@ -7,7 +7,7 @@ const About: React.FC = () => {
       text: "See it to believe it: a luxury villa with a bespoke functional fitness area created specially for resetters like you"
     },
     {
-      image: "https://github.com/spiderfranlee/images/blob/main/Cliffs%202.png?raw=true",
+      image: "https://www.theresetclann.com/Cliffs%202.png",
       text: "Cyprus’ cobalt blue and rich terracotta are the backdrop for your Circuit Breaker retreat"
     },
     {
