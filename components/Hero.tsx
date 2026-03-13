@@ -20,7 +20,8 @@ const Hero: React.FC = () => {
     "https://media.theresetclann.com/Cliffs%201.jpg",
     "https://media.theresetclann.com/Cliffs%20Yoga%203.jpg",
     "https://media.theresetclann.com/Private%20Villa.jpg",
-    "https://media.theresetclann.com/Villas.jpeg"
+    "https://media.theresetclann.com/Villas.jpeg",
+    "https://media.theresetclann.com/Workout%20Area.jpg"
   ];
 
   // Autoplay for the small preview card

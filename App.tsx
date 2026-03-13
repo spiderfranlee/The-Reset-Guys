@@ -41,7 +41,7 @@ const App: React.FC = () => {
     { 
       icon: <Music className="text-primary" size={24} />, 
       title: "Poolside Sunset Live Music & Open Bar",
-      image: "https://media.theresetclann.com/Poolside%20bar.png"
+      image: "https://media.theresetclann.com/Poolside%20party.jpg"
     },
     { 
       icon: <HeartPulse className="text-primary" size={24} />, 
