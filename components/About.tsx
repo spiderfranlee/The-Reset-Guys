@@ -20,7 +20,7 @@ const About: React.FC = () => {
       position: "object-bottom"
     },
     {
-      image: "https://github.com/spiderfranlee/images/blob/main/yacht2.jpeg?raw=true",
+      image: "https://media.theresetclann.com/Private%20Villa.jpg",
       text: "Luxury inside and out. A private villa to ensure proper rest completes the wellness picture. Private chef, pool, spa, masseuse… hey, you’re worth it right? ",
       position: "object-bottom"
     },

@@ -17,9 +17,9 @@ const Hero: React.FC = () => {
   const highlightImages = [
     "https://media.theresetclann.com/Aerial%20View.jpg",
     "https://media.theresetclann.com/Chef.png",
-    "https://media.theresetclann.com/Cliffs%201.png",
+    "https://media.theresetclann.com/Cliffs%201.jpg",
     "https://media.theresetclann.com/Cliffs%20yoga%203.png",
-    "https://media.theresetclann.com/IMG_7596.jpeg",
+    "https://media.theresetclann.com/Private%20Villa.jpg",
     "https://media.theresetclann.com/Villas.jpeg"
   ];
 
@@ -78,7 +78,7 @@ const Hero: React.FC = () => {
           muted
           playsInline
           className="object-cover w-full h-full opacity-60"
-          src="https://github.com/spiderfranlee/images/blob/244eed999f327cfc95480adc6d9af5587d6bd989/Homepage%20low%20res.mp4?raw=true"
+          src="https://media.theresetclann.com/Homepage%20low%20res.mp4"
         >
           {/* Fallback for browsers that don't support video */}
           <div className="w-full h-full bg-dark-gray flex items-center justify-center">

@@ -21,7 +21,7 @@ const App: React.FC = () => {
     { 
       icon: <Ship className="text-primary" size={24} />, 
       title: "Private Yacht Excursion",
-      image: "https://media.theresetclann.com/Cliffs%20jumps.png"
+      image: "https://media.theresetclann.com/Yacht%20Trip.jpg"
     },
     { 
       icon: <ShoppingBag className="text-primary" size={24} />, 
