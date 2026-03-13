@@ -47,7 +47,7 @@ const App: React.FC = () => {
       icon: <HeartPulse className="text-primary" size={24} />, 
       title: "Massage or Rehab Treatment", 
       desc: "Includes Sauna, Ice bath & Jacuzzi",
-      image: "https://media.theresetclann.com/massage.jpeg"
+      image: "https://media.theresetclann.com/massage.jpg"
     },
     { 
       icon: <Mountain className="text-primary" size={24} />, 

@@ -329,7 +329,7 @@ const Pricing: React.FC = () => {
             </div>
             <div className="group relative overflow-hidden rounded-2xl aspect-[4/3] border border-white/10">
               <img 
-                src="https://media.theresetclann.com/Villa%20Premium%20Room%20Pool%20View.png" 
+                src="https://media.theresetclann.com/Villa%20Premium%20Room%20Pool%20View.jpg" 
                 alt="Villa Premium Room with Pool View" 
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 referrerPolicy="no-referrer"
