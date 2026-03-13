@@ -7,7 +7,7 @@ const About: React.FC = () => {
       text: "See it to believe it: a luxury villa with a bespoke functional fitness area created specially for resetters like you"
     },
     {
-      image: "https://media.theresetclann.com/Cliffs%202.png",
+      image: "https://media.theresetclann.com/Cliffs%202.jpg",
       text: "Cyprus’ cobalt blue and rich terracotta are the backdrop for your Circuit Breaker retreat"
     },
     {
@@ -25,7 +25,7 @@ const About: React.FC = () => {
       position: "object-bottom"
     },
     {
-      image: "https://media.theresetclann.com/Cliffs%20yoga%202.png",
+      image: "https://media.theresetclann.com/Cliffs%20yoga%202.jpg",
       text: "Body and mind: you know all too well a full reset won’t happen with just fitness sessions. We’ll get you rebooted inside and out, ready to bring your new alignment to every aspect of your “normal life” "
     }
   ];

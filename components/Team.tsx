@@ -18,7 +18,7 @@ const Team: React.FC = () => {
              <div className="group">
                 <div className="relative overflow-hidden rounded-xl aspect-[3/4] mb-8 bg-dark-gray border border-white/10 group-hover:border-primary/50 transition-colors duration-500">
                    <img 
-                      src="https://media.theresetclann.com/Dev%20Profile%20Reset.png"
+                      src="https://media.theresetclann.com/Dev%20Bio%20Pic.jpg"
                       alt="Paul"
                       className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
                    />
@@ -69,7 +69,7 @@ const Team: React.FC = () => {
              <div className="group">
                 <div className="relative overflow-hidden rounded-xl aspect-[3/4] mb-8 bg-dark-gray border border-white/10 group-hover:border-secondary/50 transition-colors duration-500">
                    <img 
-                      src="https://media.theresetclann.com/Fran%20Bio%20Pic.png" 
+                      src="https://media.theresetclann.com/Fran%20bio%20pic.jpg" 
                       alt="Fran"
                       className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
                    />

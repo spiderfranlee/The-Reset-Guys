@@ -18,7 +18,7 @@ const Hero: React.FC = () => {
     "https://media.theresetclann.com/Aerial%20View.jpg",
     "https://media.theresetclann.com/Chef.png",
     "https://media.theresetclann.com/Cliffs%201.jpg",
-    "https://media.theresetclann.com/Cliffs%20yoga%203.png",
+    "https://media.theresetclann.com/Cliffs%20Yoga%203.jpg",
     "https://media.theresetclann.com/Private%20Villa.jpg",
     "https://media.theresetclann.com/Villas.jpeg"
   ];

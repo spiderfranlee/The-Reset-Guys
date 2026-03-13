@@ -36,7 +36,7 @@ const App: React.FC = () => {
     { 
       icon: <Flower2 className="text-primary" size={24} />, 
       title: "Yoga Session",
-      image: "https://media.theresetclann.com/Cliffs%202.png"
+      image: "https://media.theresetclann.com/Cliffs%202.jpg"
     },
     { 
       icon: <Music className="text-primary" size={24} />, 
@@ -52,7 +52,7 @@ const App: React.FC = () => {
     { 
       icon: <Mountain className="text-primary" size={24} />, 
       title: "Cliff Jumps",
-      image: "https://media.theresetclann.com/Cliffs%20jumps.png"
+      image: "https://media.theresetclann.com/Cliff%20jumps.jpg"
     },
   ];
 
