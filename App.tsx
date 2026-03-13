@@ -31,7 +31,7 @@ const App: React.FC = () => {
     { 
       icon: <Utensils className="text-primary" size={24} />, 
       title: "Traditional Culture & Halloumi Tasting Tour",
-      image: "https://media.theresetclann.com/Hallo.png"
+      image: "https://media.theresetclann.com/Hallo.jpg"
     },
     { 
       icon: <Flower2 className="text-primary" size={24} />, 
