@@ -15,7 +15,7 @@ const Hero: React.FC = () => {
   };
 
   const highlightImages = [
-    "https://media.theresetclann.com/Aerial%20Shot.png",
+    "https://media.theresetclann.com/Aerial%20View.jpg",
     "https://media.theresetclann.com/Chef.png",
     "https://media.theresetclann.com/Cliffs%201.png",
     "https://media.theresetclann.com/Cliffs%20yoga%203.png",
