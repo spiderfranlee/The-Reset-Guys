@@ -26,7 +26,7 @@ const App: React.FC = () => {
     { 
       icon: <ShoppingBag className="text-primary" size={24} />, 
       title: "\"Farm-to-Home\" Local Market Visit",
-      image: "https://media.theresetclann.com/Market.png"
+      image: "https://media.theresetclann.com/Market.jpg"
     },
     { 
       icon: <Utensils className="text-primary" size={24} />, 

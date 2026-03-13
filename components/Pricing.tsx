@@ -265,7 +265,7 @@ const Pricing: React.FC = () => {
             </div>
             <div className="group relative overflow-hidden rounded-2xl aspect-[4/3] border border-white/10">
               <img 
-                src="https://media.theresetclann.com/Cape%20Serenity%20Room%203.png" 
+                src="https://media.theresetclann.com/Cape%20Serenity%20Room%203.jpg" 
                 alt="Cape Serenity Room 3" 
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 referrerPolicy="no-referrer"
@@ -281,7 +281,7 @@ const Pricing: React.FC = () => {
             </div>
             <div className="group relative overflow-hidden rounded-2xl aspect-[4/3] border border-white/10">
               <img 
-                src="https://media.theresetclann.com/Cape%20Serenity%20Room%204.png" 
+                src="https://media.theresetclann.com/Cape%20Serenity%20Room%204.jpg" 
                 alt="Cape Serenity Room 4" 
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 referrerPolicy="no-referrer"
