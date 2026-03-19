@@ -92,15 +92,29 @@ const Team: React.FC = () => {
                       <p><span className="font-bold text-white">The Dream:</span> Building a premium, like-minded community and training space where sustainable health meets the good life.</p>
                    </div>
                    
-                   {/* Video Placeholder (No video provided yet) */}
-                   <div className="relative overflow-hidden rounded-lg bg-dark-gray border border-white/10 aspect-video group/video cursor-not-allowed opacity-80 flex flex-col items-center justify-center shadow-lg">
-                      <div className="absolute inset-0 bg-black/40"></div>
-                      <div className="relative z-10 flex flex-col items-center">
-                         <div className="w-14 h-14 rounded-full bg-white/10 text-white/50 flex items-center justify-center shadow-lg mb-3 border border-white/10">
+                   {/* Video Trigger - Now containing the Autoplay Video */}
+                   <div 
+                     onClick={() => setActiveVideo("https://media.theresetclann.com/Fran%20Bio%20Vid.mp4")}
+                     className="relative overflow-hidden rounded-lg bg-dark-gray border border-white/10 aspect-video group/video cursor-pointer hover:border-primary/50 transition-colors shadow-lg"
+                   >
+                      <video 
+                        src="https://media.theresetclann.com/Fran%20Bio%20Vid.mp4"
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                        className="w-full h-full object-cover opacity-90 group-hover/video:opacity-100 transition-opacity"
+                      />
+                      
+                      {/* Overlay */}
+                      <div className="absolute inset-0 bg-black/30 group-hover/video:bg-black/10 transition-colors flex items-center justify-center">
+                         <div className="w-14 h-14 rounded-full bg-primary/90 text-black flex items-center justify-center shadow-lg transform group-hover/video:scale-110 transition-transform">
                             <Play size={24} fill="currentColor" className="ml-1" />
                          </div>
-                         <p className="text-white font-bold text-sm uppercase tracking-wider">Watch Bio Video</p>
-                         <p className="text-xs text-gray-400 mt-1 font-medium tracking-widest uppercase">Coming Soon</p>
+                      </div>
+
+                      <div className="absolute bottom-3 left-3 bg-black/80 backdrop-blur-md px-3 py-1.5 rounded text-xs text-white font-bold uppercase tracking-wider border border-white/10">
+                        Watch Bio
                       </div>
                    </div>
                 </div>
