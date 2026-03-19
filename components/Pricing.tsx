@@ -177,17 +177,19 @@ const Pricing: React.FC = () => {
                 </div>
 
                 <div className="mb-8 pb-8 border-b border-white/10">
-                   <div className="flex flex-col items-start">
+                   <div className="flex flex-col items-start w-full">
                       <span className="text-gray-500 text-lg line-through font-medium mb-1">{option.originalPrice}</span>
-                      <div className="flex items-baseline">
+                      <div className="flex items-baseline mb-1">
                         <span className="text-4xl font-black text-white">{option.price}</span>
                         <span className="text-gray-500 ml-2 text-sm font-medium uppercase">{option.per}</span>
                       </div>
-                      <span className="text-primary text-xs font-bold uppercase tracking-wider mt-2 bg-primary/10 px-2 py-1 rounded">
-                        {option.saveText}
-                      </span>
+                      <div className="mt-3 w-full bg-primary/10 border border-primary/30 rounded-lg p-3 text-center shadow-lg shadow-primary/5 transform transition-all hover:scale-[1.02] hover:bg-primary/20">
+                        <span className="text-primary text-base md:text-lg font-black uppercase tracking-wider">
+                          {option.saveText}
+                        </span>
+                      </div>
                       {option.deposit && (
-                        <span className="text-gray-400 text-xs font-medium mt-2">
+                        <span className="text-gray-400 text-sm font-medium mt-3 text-center w-full">
                           {option.deposit}
                         </span>
                       )}
