@@ -11,7 +11,7 @@ const About: React.FC = () => {
       text: "Cyprus’ cobalt blue and rich terracotta are the backdrop for your Circuit Breaker retreat"
     },
     {
-      image: "https://github.com/spiderfranlee/images/blob/main/IMG_7452.jpeg?raw=true",
+      image: "https://media.theresetclann.com/Workout%20Area.jpg",
       text: "Tried and tested by professional athletes from around the world, you’ve never experienced a workout zone like this one. Elite in every sense"
     },
     {
