@@ -15,7 +15,7 @@ const About: React.FC = () => {
       text: "Tried and tested by professional athletes from around the world, you’ve never experienced a workout zone like this one. Elite in every sense"
     },
     {
-      image: "https://github.com/spiderfranlee/images/blob/main/yacht1.jpeg?raw=true",
+      image: "https://media.theresetclann.com/Yacht%20Trip%20pic.jpg",
       text: "That “how did I get here” moment: a private yacht trip to discover hidden coves and enjoy luxury and relaxation on the open sea, complete with snorkeling, swimming, and sunset views.",
       position: "object-bottom"
     },
