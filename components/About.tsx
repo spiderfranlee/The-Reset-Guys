@@ -27,6 +27,18 @@ const About: React.FC = () => {
     {
       image: "https://media.theresetclann.com/Cliffs%20yoga%202.jpg",
       text: "Body and mind: you know all too well a full reset won’t happen with just fitness sessions. We’ll get you rebooted inside and out, ready to bring your new alignment to every aspect of your “normal life” "
+    },
+    {
+      image: "https://media.theresetclann.com/Pool%20view.jpg",
+      text: "Relax and unwind by the stunning pool with panoramic views, your perfect oasis after a rewarding workout."
+    },
+    {
+      image: "https://media.theresetclann.com/Workout%20area%202.jpg",
+      text: "Push your limits in our fully-equipped functional training space, designed to bring out your best performance."
+    },
+    {
+      image: "https://media.theresetclann.com/Yacht%201.jpg",
+      text: "Experience the ultimate freedom and luxury aboard a private yacht, exploring the pristine waters of Cyprus."
     }
   ];
 
