@@ -38,20 +38,20 @@ const Pricing: React.FC = () => {
 
   const options = [
     {
-      title: 'PREMIUM VILLA SUITE',
-      subtitle: '🟢 1 ROOM AVAILABLE',
-      price: '€3,000',
-      originalPrice: '€3,510',
+      title: 'VILLA ROOM (Shared Bathroom)',
+      subtitle: '🟢 2 ROOMS AVAILABLE',
+      price: '€2,200',
+      originalPrice: '€2,574',
       per: '/ ROOM',
-      saveText: 'OR €1,755 / PERSON SHARING',
-      deposit: '⚡ Secure your luxury spot! Just a €350 deposit today.',
+      saveText: 'OR €1,287 / PERSON SHARING',
+      deposit: '⚡ Reserve your space! Just a €350 deposit today.',
       features: [
-        'XL Luxury Room',
         '1 Double Bed',
-        'En-suite Bathroom',
-        'Shared 1st Floor Terrace'
+        'Shared Hot Tub Access',
+        'Shared 1st Floor Terrace',
+        'Shared Bathroom'
       ],
-      highlight: true
+      highlight: false
     },
     {
       title: 'BUNGALOW VILLA',
@@ -86,20 +86,20 @@ const Pricing: React.FC = () => {
       highlight: false
     },
     {
-      title: 'VILLA ROOM (Shared Bathroom)',
-      subtitle: '🟢 2 ROOMS AVAILABLE',
-      price: '€2,200',
-      originalPrice: '€2,574',
+      title: 'PREMIUM VILLA SUITE',
+      subtitle: '🟢 1 ROOM AVAILABLE',
+      price: '€3,000',
+      originalPrice: '€3,510',
       per: '/ ROOM',
-      saveText: 'OR €1,287 / PERSON SHARING',
-      deposit: '⚡ Reserve your space! Just a €350 deposit today.',
+      saveText: 'OR €1,755 / PERSON SHARING',
+      deposit: '⚡ Secure your luxury spot! Just a €350 deposit today.',
       features: [
+        'XL Luxury Room',
         '1 Double Bed',
-        'Shared Hot Tub Access',
-        'Shared 1st Floor Terrace',
-        'Shared Bathroom'
+        'En-suite Bathroom',
+        'Shared 1st Floor Terrace'
       ],
-      highlight: false
+      highlight: true
     }
   ];
 
@@ -183,8 +183,8 @@ const Pricing: React.FC = () => {
                         <span className="text-4xl font-black text-white">{option.price}</span>
                         <span className="text-gray-500 ml-2 text-sm font-medium uppercase">{option.per}</span>
                       </div>
-                      <div className="mt-3 w-full bg-primary/10 border border-primary/30 rounded-lg p-3 text-center shadow-lg shadow-primary/5 transform transition-all hover:scale-[1.02] hover:bg-primary/20">
-                        <span className="text-primary text-base md:text-lg font-black uppercase tracking-wider">
+                      <div className="mt-4 w-full bg-primary/20 border-2 border-primary/50 rounded-xl p-4 text-center shadow-xl shadow-primary/20 transform transition-all hover:scale-[1.05] hover:bg-primary/30">
+                        <span className="text-primary text-xl md:text-2xl font-black uppercase tracking-wider block leading-tight">
                           {option.saveText}
                         </span>
                       </div>

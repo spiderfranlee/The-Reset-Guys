@@ -163,44 +163,55 @@ const App: React.FC = () => {
                    { 
                      day: 'Day 1', 
                      title: 'Arrival & Unwind', 
-                     desc: 'Settle into the luxury villa (fresh sheets and towels service ready). Cliff walk to the beach and introduction.' 
+                     desc: 'Settle into the luxury villa (fresh sheets and towels service ready). Cliff walk to the beach and introduction.',
+                     workout: 'Evening: Light Mobility & Welcome Stretch'
                    },
                    { 
                      day: 'Day 2', 
                      title: 'Fitness & Fresh Food', 
-                     desc: 'Morning training in the villa\'s private workout space. Afternoon "Farm-to-Home" Local Market Visit to source fresh ingredients.' 
+                     desc: 'Morning training in the villa\'s private workout space. Afternoon "Farm-to-Home" Local Market Visit to source fresh ingredients.',
+                     workout: 'Morning: High-Intensity Functional Circuit'
                    },
                    { 
                      day: 'Day 3', 
                      title: 'Water & Adrenaline', 
-                     desc: 'Sunrise Stand-Up Paddle (SUP) on the water. Afternoon Cliff Jumps.' 
+                     desc: 'Sunrise Stand-Up Paddle (SUP) on the water. Afternoon Cliff Jumps.',
+                     workout: 'Morning: Beach Bootcamp & Core Conditioning'
                    },
                    { 
                      day: 'Day 4', 
                      title: 'Culture & Recovery', 
-                     desc: 'Traditional Culture & Halloumi Tasting Tour. Afternoon Massage or Rehabilitation Treatment.' 
+                     desc: 'Traditional Culture & Halloumi Tasting Tour. Afternoon Massage or Rehabilitation Treatment.',
+                     workout: 'Morning: Active Recovery & Yoga Flow'
                    },
                    { 
                      day: 'Day 5', 
                      title: 'The VIP Experience', 
-                     desc: 'Private Yacht Excursion.' 
+                     desc: 'Private Yacht Excursion.',
+                     workout: 'Morning: Strength & Power Session'
                    },
                    { 
                      day: 'Day 6', 
                      title: 'Sweat & Celebrate', 
-                     desc: 'Final training session in the villa workout space. Poolside sunset and night live music.' 
+                     desc: 'Final training session in the villa workout space. Poolside sunset and night live music.',
+                     workout: 'Morning: The Reset Challenge (Team Workout)'
                    },
                    { 
                      day: 'Day 7', 
                      title: 'Farewell', 
-                     desc: 'Morning Yoga Session to close the retreat. Check out and departure.' 
+                     desc: 'Morning Yoga Session to close the retreat. Check out and departure.',
+                     workout: 'Morning: Farewell Flow & Deep Stretch'
                    }
                  ].map((slot, index) => (
                    <div key={index} className="mb-10 ml-8 relative group">
                      <div className="absolute -left-10 mt-1.5 w-4 h-4 rounded-full bg-primary border-4 border-black group-hover:scale-110 transition-transform duration-300"></div>
                      <span className="font-bold text-primary text-sm uppercase tracking-wide block mb-1">{slot.day}</span>
                      <h3 className="text-xl font-bold text-white mb-2">{slot.title}</h3>
-                     <p className="text-gray-400 text-sm leading-relaxed">{slot.desc}</p>
+                     <p className="text-gray-400 text-sm leading-relaxed mb-3">{slot.desc}</p>
+                     <div className="inline-flex items-center gap-2 bg-white/5 border border-white/10 rounded px-3 py-1.5">
+                       <Dumbbell size={14} className="text-primary" />
+                       <span className="text-xs font-bold text-white uppercase tracking-wider">{slot.workout}</span>
+                     </div>
                    </div>
                  ))}
               </div>
