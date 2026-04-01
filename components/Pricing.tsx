@@ -11,8 +11,8 @@ const Pricing: React.FC = () => {
   });
 
   useEffect(() => {
-    // Set the date we're counting down to (March 31st, 2026 23:59:59)
-    const countDownDate = new Date("Mar 31, 2026 23:59:59").getTime();
+    // Set the date we're counting down to (April 30th, 2026 23:59:59)
+    const countDownDate = new Date("Apr 30, 2026 23:59:59").getTime();
 
     const updateTimer = () => {
       const now = new Date().getTime();

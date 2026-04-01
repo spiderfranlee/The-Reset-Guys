@@ -5,6 +5,7 @@ import About from './components/About.tsx';
 import Philosophy from './components/Philosophy.tsx';
 import Team from './components/Team.tsx';
 import Pricing from './components/Pricing.tsx';
+import Itinerary from './components/Itinerary.tsx';
 import ChatWidget from './components/ChatWidget.tsx';
 import Footer from './components/Footer.tsx';
 import { Waves, Ship, Utensils, ShoppingBag, Music, Flower2, HeartPulse, Mountain, Home, Dumbbell, Plane, ChefHat, ShieldCheck } from 'lucide-react';
@@ -153,70 +154,7 @@ const App: React.FC = () => {
           </div>
         </section>
 
-        <section id="itinerary" className="py-24 bg-black border-t border-white/5">
-           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <h2 className="text-3xl md:text-4xl font-black uppercase text-white mb-12 text-center">
-                Sample <span className="text-primary">Itinerary</span>
-              </h2>
-              <div className="max-w-3xl mx-auto space-y-0 relative border-l border-white/10 ml-4 md:ml-auto md:mr-auto">
-                 {[
-                   { 
-                     day: 'Day 1', 
-                     title: 'Arrival & Unwind', 
-                     desc: 'Settle into the luxury villa (fresh sheets and towels service ready). Cliff walk to the beach and introduction.',
-                     workout: 'Evening: Light Mobility & Welcome Stretch'
-                   },
-                   { 
-                     day: 'Day 2', 
-                     title: 'Fitness & Fresh Food', 
-                     desc: 'Morning training in the villa\'s private workout space. Afternoon "Farm-to-Home" Local Market Visit to source fresh ingredients.',
-                     workout: 'Morning: High-Intensity Functional Circuit'
-                   },
-                   { 
-                     day: 'Day 3', 
-                     title: 'Water & Adrenaline', 
-                     desc: 'Sunrise Stand-Up Paddle (SUP) on the water. Afternoon Cliff Jumps.',
-                     workout: 'Morning: Beach Bootcamp & Core Conditioning'
-                   },
-                   { 
-                     day: 'Day 4', 
-                     title: 'Culture & Recovery', 
-                     desc: 'Traditional Culture & Halloumi Tasting Tour. Afternoon Massage or Rehabilitation Treatment.',
-                     workout: 'Morning: Active Recovery & Yoga Flow'
-                   },
-                   { 
-                     day: 'Day 5', 
-                     title: 'The VIP Experience', 
-                     desc: 'Private Yacht Excursion.',
-                     workout: 'Morning: Strength & Power Session'
-                   },
-                   { 
-                     day: 'Day 6', 
-                     title: 'Sweat & Celebrate', 
-                     desc: 'Final training session in the villa workout space. Poolside sunset and night live music.',
-                     workout: 'Morning: The Reset Challenge (Team Workout)'
-                   },
-                   { 
-                     day: 'Day 7', 
-                     title: 'Farewell', 
-                     desc: 'Morning Yoga Session to close the retreat. Check out and departure.',
-                     workout: 'Morning: Farewell Flow & Deep Stretch'
-                   }
-                 ].map((slot, index) => (
-                   <div key={index} className="mb-10 ml-8 relative group">
-                     <div className="absolute -left-10 mt-1.5 w-4 h-4 rounded-full bg-primary border-4 border-black group-hover:scale-110 transition-transform duration-300"></div>
-                     <span className="font-bold text-primary text-sm uppercase tracking-wide block mb-1">{slot.day}</span>
-                     <h3 className="text-xl font-bold text-white mb-2">{slot.title}</h3>
-                     <p className="text-gray-400 text-sm leading-relaxed mb-3">{slot.desc}</p>
-                     <div className="inline-flex items-center gap-2 bg-white/5 border border-white/10 rounded px-3 py-1.5">
-                       <Dumbbell size={14} className="text-primary" />
-                       <span className="text-xs font-bold text-white uppercase tracking-wider">{slot.workout}</span>
-                     </div>
-                   </div>
-                 ))}
-              </div>
-           </div>
-        </section>
+        <Itinerary />
 
         <Pricing />
         
