@@ -183,8 +183,8 @@ const Pricing: React.FC = () => {
                         <span className="text-4xl font-black text-white">{option.price}</span>
                         <span className="text-gray-500 ml-2 text-sm font-medium uppercase">{option.per}</span>
                       </div>
-                      <div className="mt-4 w-full bg-primary/20 border-2 border-primary/50 rounded-xl p-4 text-center shadow-xl shadow-primary/20 transform transition-all hover:scale-[1.05] hover:bg-primary/30">
-                        <span className="text-primary text-xl md:text-2xl font-black uppercase tracking-wider block leading-tight">
+                      <div className="mt-4 w-full bg-primary/20 border-2 border-primary rounded-xl p-5 text-center shadow-[0_0_20px_rgba(204,255,0,0.3)] transform transition-all hover:scale-[1.05] hover:bg-primary/30">
+                        <span className="text-primary text-2xl md:text-3xl font-black uppercase tracking-wider block leading-tight drop-shadow-md">
                           {option.saveText}
                         </span>
                       </div>
@@ -253,32 +253,44 @@ const Pricing: React.FC = () => {
               <img 
                 src="https://media.theresetclann.com/Cape%20Serenity%20Room%202.jpg" 
                 alt="Cape Serenity Room 2" 
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale-[0.3]"
                 referrerPolicy="no-referrer"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300"></div>
-              <div className="absolute top-4 right-4 bg-primary/90 text-black text-xs font-bold uppercase tracking-widest py-1.5 px-3 rounded-full shadow-lg backdrop-blur-sm flex items-center gap-1.5">
-                <span className="w-2 h-2 rounded-full bg-black animate-pulse"></span>
-                Available
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-black/10 opacity-70 group-hover:opacity-90 transition-opacity duration-300 z-10"></div>
+              
+              <div className="absolute inset-0 flex items-center justify-center z-20 pointer-events-none">
+                 <div className="bg-red-600/90 text-white font-black text-xl md:text-2xl uppercase tracking-[0.2em] py-2 px-8 transform -rotate-12 border border-white/20 shadow-2xl backdrop-blur-md">
+                   Reserved
+                 </div>
               </div>
-              <div className="absolute bottom-4 left-4 right-4">
-                <h4 className="text-xl font-bold text-white">Cape Serenity Room 2</h4>
+
+              <div className="absolute top-4 right-4 bg-red-600/90 text-white text-xs font-bold uppercase tracking-widest py-1.5 px-3 rounded-full shadow-lg backdrop-blur-sm flex items-center gap-1.5 z-20">
+                Reserved
+              </div>
+              <div className="absolute bottom-4 left-4 right-4 z-20">
+                <h4 className="text-xl font-bold text-white/80">Cape Serenity Room 2</h4>
               </div>
             </div>
             <div className="group relative overflow-hidden rounded-2xl aspect-[4/3] border border-white/10">
               <img 
                 src="https://media.theresetclann.com/Cape%20Serenity%20Room%203.jpg" 
                 alt="Cape Serenity Room 3" 
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale-[0.3]"
                 referrerPolicy="no-referrer"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300"></div>
-              <div className="absolute top-4 right-4 bg-primary/90 text-black text-xs font-bold uppercase tracking-widest py-1.5 px-3 rounded-full shadow-lg backdrop-blur-sm flex items-center gap-1.5">
-                <span className="w-2 h-2 rounded-full bg-black animate-pulse"></span>
-                Available
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-black/10 opacity-70 group-hover:opacity-90 transition-opacity duration-300 z-10"></div>
+              
+              <div className="absolute inset-0 flex items-center justify-center z-20 pointer-events-none">
+                 <div className="bg-red-600/90 text-white font-black text-xl md:text-2xl uppercase tracking-[0.2em] py-2 px-8 transform -rotate-12 border border-white/20 shadow-2xl backdrop-blur-md">
+                   Reserved
+                 </div>
               </div>
-              <div className="absolute bottom-4 left-4 right-4">
-                <h4 className="text-xl font-bold text-white">Cape Serenity Room 3</h4>
+
+              <div className="absolute top-4 right-4 bg-red-600/90 text-white text-xs font-bold uppercase tracking-widest py-1.5 px-3 rounded-full shadow-lg backdrop-blur-sm flex items-center gap-1.5 z-20">
+                Reserved
+              </div>
+              <div className="absolute bottom-4 left-4 right-4 z-20">
+                <h4 className="text-xl font-bold text-white/80">Cape Serenity Room 3</h4>
               </div>
             </div>
             <div className="group relative overflow-hidden rounded-2xl aspect-[4/3] border border-white/10">
