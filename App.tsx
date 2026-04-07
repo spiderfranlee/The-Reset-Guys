@@ -67,7 +67,6 @@ const App: React.FC = () => {
       <main>
         <Hero />
         <About />
-        <Philosophy />
         <Team />
         <WhatsIncluded />
 
@@ -134,6 +133,8 @@ const App: React.FC = () => {
         <Itinerary />
 
         <Pricing />
+        
+        <Philosophy />
         
       </main>
       <Footer />
