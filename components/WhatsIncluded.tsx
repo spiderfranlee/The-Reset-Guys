@@ -29,7 +29,7 @@ const WhatsIncluded: React.FC = () => {
     { title: "Alcohol", desc: "No ban, but this isn't a boozy holiday. Local wine in beautiful settings will be available, but drinks are separate." },
     { title: "Additional sports massage sessions", desc: "One included per person. Extra sessions available at an additional fee." },
     { title: "Meals outside the villa", desc: "Off-villa dining (like beach lunches) is separate. Groups who prefer all meals at the villa are fully covered." },
-    { title: "Evening transport into Ayia Napa", desc: "We'll help coordinate group transport in and cabs back, but this is at your own cost. Covered in onboarding." }
+    { title: "Evening transport into Ayia Napa", desc: "We'll help coordinate group transport in and taxis or cabs back, but this is at your own cost. Covered in onboarding." }
   ];
 
   return (
