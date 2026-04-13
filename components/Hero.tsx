@@ -7,8 +7,8 @@ const Hero: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [previewIndex, setPreviewIndex] = useState(0);
 
-  const scrollToAbout = () => {
-    const element = document.getElementById('overview');
+  const scrollToRooms = () => {
+    const element = document.getElementById('the-villa');
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
@@ -111,7 +111,7 @@ const Hero: React.FC = () => {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button onClick={scrollToAbout} className="group">
+                <Button onClick={scrollToRooms} className="group">
                   Book Your Retreat
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
