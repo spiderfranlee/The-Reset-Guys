@@ -11,10 +11,7 @@ const Footer: React.FC = () => {
           <div className="space-y-4">
             <div className="flex flex-col items-start">
               <span className="text-2xl font-black italic tracking-tighter text-white uppercase leading-none">
-                CIRCUIT <span className="text-primary">BREAKER</span>
-              </span>
-              <span className="text-[0.6rem] font-bold tracking-[0.2em] text-gray-400 uppercase ml-0.5">
-                by The Reset Clann
+                THE RESET <span className="text-primary">CLANN</span>
               </span>
             </div>
             <p className="text-gray-400 text-sm max-w-xs leading-relaxed">

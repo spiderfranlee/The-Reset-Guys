@@ -44,10 +44,7 @@ const Navbar: React.FC = () => {
             */}
             <a href="/" className="flex flex-col items-start group">
               <span className="text-2xl font-black italic tracking-tighter text-white uppercase leading-none">
-                CIRCUIT <span className="text-primary">BREAKER</span>
-              </span>
-              <span className="text-[0.6rem] font-bold tracking-[0.2em] text-gray-400 uppercase group-hover:text-white transition-colors ml-0.5">
-                by The Reset Clann
+                THE RESET <span className="text-primary">CLANN</span>
               </span>
             </a>
           </div>

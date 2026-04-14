@@ -28,7 +28,7 @@ const WhatsIncluded: React.FC = () => {
     { title: "Flights", desc: "We recommend Skyscanner. You'll want to fly into Larnaca." },
     { title: "Alcohol", desc: "No ban, but this isn't a boozy holiday. Local wine in beautiful settings will be available, but drinks are separate." },
     { title: "Additional sports massage sessions", desc: "One included per person. Extra sessions available at an additional fee." },
-    { title: "Meals outside the villa", desc: "Off-villa dining (like beach lunches) is separate. Groups who prefer all meals at the villa are fully covered." },
+    { title: "Meals outside the villa", desc: "Are separate but we will provide packed lunches for beach days. Groups who prefer all meals at the villa are fully covered." },
     { title: "Taxis or cabs back", desc: "We'll help coordinate group transport in but taxis or cabs back, but this is at your own cost. Covered in onboarding." }
   ];
 
