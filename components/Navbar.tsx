@@ -19,17 +19,17 @@ const Navbar: React.FC = () => {
   }, []);
 
   const navLinks = [
-    { name: 'Highlights', href: '#highlights' },
-    { name: 'Overview', href: '#overview' },
-    { name: 'Philosophy', href: '#philosophy' },
-    { name: 'Team', href: '#team' },
-    { name: 'Included', href: '#whats-included' },
-    { name: 'Extras', href: '#extras' },
-    { name: 'Dates', href: '#dates' },
-    { name: 'Itinerary', href: '#itinerary' },
-    { name: 'Pricing', href: '#pricing' },
-    { name: 'Villa', href: '#the-villa' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Highlights', href: '/#highlights' },
+    { name: 'Overview', href: '/#overview' },
+    { name: 'Philosophy', href: '/#philosophy' },
+    { name: 'Team', href: '/#team' },
+    { name: 'Included', href: '/#whats-included' },
+    { name: 'Extras', href: '/#extras' },
+    { name: 'Dates', href: '/#dates' },
+    { name: 'Itinerary', href: '/#itinerary' },
+    { name: 'Pricing', href: '/#pricing' },
+    { name: 'Villa', href: '/#the-villa' },
+    { name: 'Contact', href: '/#contact' },
   ];
 
   return (
@@ -42,7 +42,7 @@ const Navbar: React.FC = () => {
               REPLACE WITH YOUR LOGO IMAGE 
               <img src="/path/to/logo.png" alt="CIRCUIT BREAKER by The Reset Clann" className="h-12" />
             */}
-            <a href="#" className="flex flex-col items-start group">
+            <a href="/" className="flex flex-col items-start group">
               <span className="text-2xl font-black italic tracking-tighter text-white uppercase leading-none">
                 CIRCUIT <span className="text-primary">BREAKER</span>
               </span>
