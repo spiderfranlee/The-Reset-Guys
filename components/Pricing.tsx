@@ -42,10 +42,10 @@ const Pricing: React.FC = () => {
     {
       title: 'VILLA ROOM (Shared Bathroom)',
       subtitle: '🟢 2 ROOMS AVAILABLE',
-      price: '€2,200',
-      originalPrice: '€2,574',
+      price: '€2,199',
+      originalPrice: '€2,569',
       per: '/ ROOM',
-      saveText: 'OR €1,287 / PERSON SHARING',
+      saveText: 'OR €1,419 / PERSON',
       deposit: '⚡ Reserve your space! Just a €350 deposit today.',
       features: [
         '1 Double Bed',
@@ -57,11 +57,11 @@ const Pricing: React.FC = () => {
     },
     {
       title: 'BUNGALOW VILLA',
-      subtitle: '🟢 5 ROOMS AVAILABLE',
-      price: '€2,200',
-      originalPrice: '€2,574',
+      subtitle: '🟢 4 ROOMS AVAILABLE',
+      price: '€2,199',
+      originalPrice: '€2,569',
       per: '/ ROOM',
-      saveText: 'OR €1,287 / PERSON SHARING',
+      saveText: 'OR €1,419 / PERSON',
       deposit: '⚡ Lock in your fitness getaway! Just a €350 deposit today.',
       features: [
         'Private Room',
@@ -77,7 +77,7 @@ const Pricing: React.FC = () => {
       price: '€4,000',
       originalPrice: '€4,680',
       per: '/ ROOM',
-      saveText: 'OR €1,170 / PERSON SHARING',
+      saveText: 'OR €1,299 / PERSON',
       deposit: '⚡ Bring the crew! Just a €350 deposit per person today.',
       features: [
         '2 Double Beds',
@@ -93,7 +93,7 @@ const Pricing: React.FC = () => {
       price: '€3,000',
       originalPrice: '€3,510',
       per: '/ ROOM',
-      saveText: 'OR €1,755 / PERSON SHARING',
+      saveText: 'OR €1,935 / PERSON',
       deposit: '⚡ Secure your luxury spot! Just a €350 deposit today.',
       features: [
         'XL Luxury Room',
