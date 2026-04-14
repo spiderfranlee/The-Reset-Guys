@@ -42,10 +42,12 @@ const Pricing: React.FC = () => {
     {
       title: 'VILLA ROOM (Shared Bathroom)',
       subtitle: '🟢 2 ROOMS AVAILABLE',
-      price: '€2,199',
-      originalPrice: '€2,569',
-      per: '/ ROOM',
-      saveText: 'OR €1,419 / PERSON',
+      pricingMode: 'split',
+      soloPrice: '€2,199',
+      soloRegular: '€2,569',
+      sharedPrice: '€2,837',
+      sharedPerPerson: '€1,418.50',
+      sharedRegular: '€3,314',
       deposit: '⚡ Reserve your space! Just a €350 deposit today.',
       features: [
         '1 Double Bed',
@@ -58,10 +60,12 @@ const Pricing: React.FC = () => {
     {
       title: 'BUNGALOW VILLA',
       subtitle: '🟢 4 ROOMS AVAILABLE',
-      price: '€2,199',
-      originalPrice: '€2,569',
-      per: '/ ROOM',
-      saveText: 'OR €1,419 / PERSON',
+      pricingMode: 'split',
+      soloPrice: '€2,199',
+      soloRegular: '€2,569',
+      sharedPrice: '€2,837',
+      sharedPerPerson: '€1,418.50',
+      sharedRegular: '€3,314',
       deposit: '⚡ Lock in your fitness getaway! Just a €350 deposit today.',
       features: [
         'Private Room',
@@ -72,16 +76,19 @@ const Pricing: React.FC = () => {
       highlight: false
     },
     {
-      title: 'BUNGALOW (GROUP SHARE)',
+      title: 'Bungalow Villa (Up to 4 People)',
       subtitle: '🟢 2 ROOMS AVAILABLE',
-      price: '€4,000',
-      originalPrice: '€4,680',
-      per: '/ ROOM',
-      saveText: 'OR €1,299 / PERSON',
+      pricingMode: 'multi-split',
+      tiers: [
+        { label: 'Solo', price: '€3,999', regular: '€4,679' },
+        { label: 'Shared (2)', price: '€4,389', perPerson: '€2,194.50', regular: '€5,129' },
+        { label: 'Shared (3)', price: '€4,819', perPerson: '€1,606.33', regular: '€5,629' },
+        { label: 'Shared (4)', price: '€5,279', perPerson: '€1,319.75', regular: '€6,169' }
+      ],
       deposit: '⚡ Bring the crew! Just a €350 deposit per person today.',
       features: [
         '2 Double Beds',
-        '4 People Sharing',
+        'Up to 4 People Sharing',
         'En-suite Bathroom',
         'Perfect for groups'
       ],
@@ -180,18 +187,64 @@ const Pricing: React.FC = () => {
 
                 <div className="mb-8 pb-8 border-b border-white/10">
                    <div className="flex flex-col items-start w-full">
-                      <span className="text-gray-500 text-lg line-through font-medium mb-1">{option.originalPrice}</span>
-                      <div className="flex items-baseline mb-1">
-                        <span className="text-4xl font-black text-white">{option.price}</span>
-                        <span className="text-gray-500 ml-2 text-sm font-medium uppercase">{option.per}</span>
-                      </div>
-                      <div className="mt-4 w-full bg-primary/20 border-2 border-primary rounded-xl p-5 text-center shadow-[0_0_20px_rgba(204,255,0,0.3)] transform transition-all hover:scale-[1.05] hover:bg-primary/30">
-                        <span className="text-primary text-2xl md:text-3xl font-black uppercase tracking-wider block leading-tight drop-shadow-md">
-                          {option.saveText}
-                        </span>
-                      </div>
+                      {(option as any).pricingMode === 'multi-split' ? (
+                         <div className="w-full space-y-2.5">
+                            {((option as any).tiers || []).map((tier: any, idx: number) => (
+                               <React.Fragment key={idx}>
+                                 <div className="flex flex-col">
+                                    <span className="text-primary font-bold uppercase tracking-wider text-sm mb-0.5">{tier.label}</span>
+                                    <div className="flex items-baseline gap-2">
+                                       <span className="text-2xl font-black text-white">{tier.price}</span>
+                                       <span className="text-[10px] text-primary uppercase font-bold">Early Bird{tier.perPerson ? ' Total' : ''}</span>
+                                    </div>
+                                    {tier.perPerson && (
+                                      <span className="text-gray-300 text-xs font-medium my-0.5">({tier.perPerson} per person)</span>
+                                    )}
+                                    <span className="text-gray-500 text-xs line-through font-medium">{tier.regular} Regular{tier.perPerson ? ' Total' : ''}</span>
+                                 </div>
+                                 {idx < ((option as any).tiers.length - 1) && (
+                                   <div className="w-full h-px bg-white/10 my-1.5"></div>
+                                 )}
+                               </React.Fragment>
+                            ))}
+                         </div>
+                      ) : (option as any).pricingMode === 'split' ? (
+                         <div className="w-full space-y-3">
+                            <div className="flex flex-col">
+                               <span className="text-primary font-bold uppercase tracking-wider text-sm mb-1">Solo</span>
+                               <div className="flex items-baseline gap-2">
+                                  <span className="text-3xl font-black text-white">{(option as any).soloPrice}</span>
+                                  <span className="text-xs text-primary uppercase font-bold">Early Bird</span>
+                               </div>
+                               <span className="text-gray-500 text-sm line-through font-medium">{(option as any).soloRegular} Regular</span>
+                            </div>
+                            <div className="w-full h-px bg-white/10 my-2"></div>
+                            <div className="flex flex-col">
+                               <span className="text-primary font-bold uppercase tracking-wider text-sm mb-1">Shared (2)</span>
+                               <div className="flex items-baseline gap-2">
+                                  <span className="text-3xl font-black text-white">{(option as any).sharedPrice}</span>
+                                  <span className="text-xs text-primary uppercase font-bold">Early Bird Total</span>
+                               </div>
+                               <span className="text-gray-300 text-sm font-medium my-0.5">({(option as any).sharedPerPerson} per person)</span>
+                               <span className="text-gray-500 text-sm line-through font-medium">{(option as any).sharedRegular} Regular Total</span>
+                            </div>
+                         </div>
+                      ) : (
+                         <>
+                            <span className="text-gray-500 text-lg line-through font-medium mb-1">{option.originalPrice}</span>
+                            <div className="flex items-baseline mb-1">
+                              <span className="text-4xl font-black text-white">{option.price}</span>
+                              <span className="text-gray-500 ml-2 text-sm font-medium uppercase">{option.per}</span>
+                            </div>
+                            <div className="mt-4 w-full bg-primary/20 border-2 border-primary rounded-xl p-5 text-center shadow-[0_0_20px_rgba(204,255,0,0.3)] transform transition-all hover:scale-[1.05] hover:bg-primary/30">
+                              <span className="text-primary text-2xl md:text-3xl font-black uppercase tracking-wider block leading-tight drop-shadow-md">
+                                {option.saveText}
+                              </span>
+                            </div>
+                         </>
+                      )}
                       {option.deposit && (
-                        <span className="text-gray-400 text-sm font-medium mt-3 text-center w-full">
+                        <span className="text-gray-400 text-sm font-medium mt-4 text-center w-full block">
                           {option.deposit}
                         </span>
                       )}
