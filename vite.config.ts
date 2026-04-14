@@ -6,7 +6,7 @@ import tailwindcss from '@tailwindcss/vite';
 export default defineConfig(({ mode }) => {
     const env = loadEnv(mode, '.', '');
     return {
-      base: './', // Use relative paths for assets so it works on GitHub Pages subpaths
+      base: '/', // Use absolute paths for assets so it works on subpaths like /rooms
       server: {
         port: 3000,
         host: '0.0.0.0',
