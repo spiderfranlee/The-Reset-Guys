@@ -95,12 +95,14 @@ const Pricing: React.FC = () => {
       highlight: false
     },
     {
-      title: 'PREMIUM VILLA SUITE',
+      title: 'Premium Villa Suite (1-2 People, XL with Terrace, Sea View)',
       subtitle: '🟢 1 ROOM AVAILABLE',
-      price: '€3,000',
-      originalPrice: '€3,510',
-      per: '/ ROOM',
-      saveText: 'OR €1,935 / PERSON',
+      pricingMode: 'split',
+      soloPrice: '€2,999',
+      soloRegular: '€3,499',
+      sharedPrice: '€3,869',
+      sharedPerPerson: '€1,934.50',
+      sharedRegular: '€4,514',
       deposit: '⚡ Secure your luxury spot! Just a €350 deposit today.',
       features: [
         'XL Luxury Room',
