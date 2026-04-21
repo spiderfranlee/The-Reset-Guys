@@ -13,8 +13,8 @@ const Pricing: React.FC = () => {
   });
 
   useEffect(() => {
-    // Set the date we're counting down to (April 30th, 2026 23:59:59)
-    const countDownDate = new Date("Apr 30, 2026 23:59:59").getTime();
+    // Set the date we're counting down to (May 9th, 2026 23:59:59)
+    const countDownDate = new Date("May 9, 2026 23:59:59").getTime();
 
     const updateTimer = () => {
       const now = new Date().getTime();
@@ -134,11 +134,16 @@ const Pricing: React.FC = () => {
               <div className="absolute inset-0 bg-primary/5 group-hover:bg-primary/10 transition-colors duration-500"></div>
               
               <div className="relative z-10 flex flex-col items-center">
-                <div className="flex items-center gap-2 mb-6">
-                  <Clock className="text-primary animate-pulse" size={24} />
-                  <h3 className="text-xl md:text-2xl font-bold text-white uppercase tracking-wider">
-                    Early Bird Offer Ends In
-                  </h3>
+                <div className="flex flex-col items-center gap-1 mb-6">
+                  <div className="flex items-center gap-2">
+                    <Clock className="text-primary animate-pulse" size={24} />
+                    <h3 className="text-xl md:text-2xl font-bold text-white uppercase tracking-wider">
+                      Early Bird Offer Ends May 9th
+                    </h3>
+                  </div>
+                  <span className="text-primary/80 text-sm font-semibold tracking-widest uppercase">
+                    (6 months out - exciting)
+                  </span>
                 </div>
                 
                 <div className="grid grid-cols-4 gap-4 md:gap-8 w-full max-w-2xl">
