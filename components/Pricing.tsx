@@ -13,8 +13,8 @@ const Pricing: React.FC = () => {
   });
 
   useEffect(() => {
-    // Set the date we're counting down to (May 9th, 2026 23:59:59)
-    const countDownDate = new Date("May 9, 2026 23:59:59").getTime();
+    // Set the date we're counting down to (November 9th, 2026 23:59:59)
+    const countDownDate = new Date("Nov 9, 2026 23:59:59").getTime();
 
     const updateTimer = () => {
       const now = new Date().getTime();
@@ -43,11 +43,9 @@ const Pricing: React.FC = () => {
       title: 'VILLA ROOM (Shared Bathroom)',
       subtitle: '🟢 2 ROOMS AVAILABLE',
       pricingMode: 'split',
-      soloPrice: '€2,199',
-      soloRegular: '€2,569',
-      sharedPrice: '€2,837',
-      sharedPerPerson: '€1,418.50',
-      sharedRegular: '€3,314',
+      soloPrice: '€2,569',
+      sharedPrice: '€3,314',
+      sharedPerPerson: '€1,657',
       deposit: '⚡ Reserve your space! Just a €350 deposit today.',
       features: [
         '1 Double Bed',
@@ -61,11 +59,9 @@ const Pricing: React.FC = () => {
       title: 'BUNGALOW VILLA',
       subtitle: '🟢 4 ROOMS AVAILABLE',
       pricingMode: 'split',
-      soloPrice: '€2,199',
-      soloRegular: '€2,569',
-      sharedPrice: '€2,837',
-      sharedPerPerson: '€1,418.50',
-      sharedRegular: '€3,314',
+      soloPrice: '€2,569',
+      sharedPrice: '€3,314',
+      sharedPerPerson: '€1,657',
       deposit: '⚡ Lock in your fitness getaway! Just a €350 deposit today.',
       features: [
         'Private Room',
@@ -80,10 +76,10 @@ const Pricing: React.FC = () => {
       subtitle: '🟢 2 ROOMS AVAILABLE',
       pricingMode: 'multi-split',
       tiers: [
-        { label: 'Solo', price: '€3,999', regular: '€4,679' },
-        { label: 'Shared (2)', price: '€4,389', perPerson: '€2,194.50', regular: '€5,129' },
-        { label: 'Shared (3)', price: '€4,819', perPerson: '€1,606.33', regular: '€5,629' },
-        { label: 'Shared (4)', price: '€5,279', perPerson: '€1,319.75', regular: '€6,169' }
+        { label: 'Solo', price: '€4,679' },
+        { label: 'Shared (2)', price: '€5,129', perPerson: '€2,564.50' },
+        { label: 'Shared (3)', price: '€5,629', perPerson: '€1,876.33' },
+        { label: 'Shared (4)', price: '€6,169', perPerson: '€1,542.25' }
       ],
       deposit: '⚡ Bring the crew! Just a €350 deposit per person today.',
       features: [
@@ -98,11 +94,9 @@ const Pricing: React.FC = () => {
       title: 'Premium Villa Suite (1-2 People, XL with Terrace, Sea View)',
       subtitle: '🟢 1 ROOM AVAILABLE',
       pricingMode: 'split',
-      soloPrice: '€2,999',
-      soloRegular: '€3,499',
-      sharedPrice: '€3,869',
-      sharedPerPerson: '€1,934.50',
-      sharedRegular: '€4,514',
+      soloPrice: '€3,499',
+      sharedPrice: '€4,514',
+      sharedPerPerson: '€2,257',
       deposit: '⚡ Secure your luxury spot! Just a €350 deposit today.',
       features: [
         'XL Luxury Room',
@@ -138,11 +132,11 @@ const Pricing: React.FC = () => {
                   <div className="flex items-center gap-2">
                     <Clock className="text-primary animate-pulse" size={24} />
                     <h3 className="text-xl md:text-2xl font-bold text-white uppercase tracking-wider">
-                      Early Bird Offer Ends May 9th
+                      Countdown to the Retreat
                     </h3>
                   </div>
                   <span className="text-primary/80 text-sm font-semibold tracking-widest uppercase">
-                    (6 months out - exciting)
+                    (Starts November 9th, 2026)
                   </span>
                 </div>
                 
@@ -202,12 +196,11 @@ const Pricing: React.FC = () => {
                                     <span className="text-primary font-bold uppercase tracking-wider text-sm mb-0.5">{tier.label}</span>
                                     <div className="flex items-baseline gap-2">
                                        <span className="text-2xl font-black text-white">{tier.price}</span>
-                                       <span className="text-[10px] text-primary uppercase font-bold">Early Bird{tier.perPerson ? ' Total' : ''}</span>
+                                       {tier.perPerson && <span className="text-[10px] text-primary uppercase font-bold">Total</span>}
                                     </div>
                                     {tier.perPerson && (
                                       <span className="text-gray-300 text-xs font-medium my-0.5">({tier.perPerson} per person)</span>
                                     )}
-                                    <span className="text-gray-500 text-xs line-through font-medium">{tier.regular} Regular{tier.perPerson ? ' Total' : ''}</span>
                                  </div>
                                  {idx < ((option as any).tiers.length - 1) && (
                                    <div className="w-full h-px bg-white/10 my-1.5"></div>
@@ -221,19 +214,16 @@ const Pricing: React.FC = () => {
                                <span className="text-primary font-bold uppercase tracking-wider text-sm mb-1">Solo</span>
                                <div className="flex items-baseline gap-2">
                                   <span className="text-3xl font-black text-white">{(option as any).soloPrice}</span>
-                                  <span className="text-xs text-primary uppercase font-bold">Early Bird</span>
                                </div>
-                               <span className="text-gray-500 text-sm line-through font-medium">{(option as any).soloRegular} Regular</span>
                             </div>
                             <div className="w-full h-px bg-white/10 my-2"></div>
                             <div className="flex flex-col">
                                <span className="text-primary font-bold uppercase tracking-wider text-sm mb-1">Shared (2)</span>
                                <div className="flex items-baseline gap-2">
                                   <span className="text-3xl font-black text-white">{(option as any).sharedPrice}</span>
-                                  <span className="text-xs text-primary uppercase font-bold">Early Bird Total</span>
+                                  <span className="text-xs text-primary uppercase font-bold">Total</span>
                                </div>
                                <span className="text-gray-300 text-sm font-medium my-0.5">({(option as any).sharedPerPerson} per person)</span>
-                               <span className="text-gray-500 text-sm line-through font-medium">{(option as any).sharedRegular} Regular Total</span>
                             </div>
                          </div>
                       ) : (
