@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import Button from './Button.tsx';
 import { Check, Star, Clock } from 'lucide-react';
 
@@ -157,6 +158,13 @@ const Pricing: React.FC = () => {
                       <span className="text-xs md:text-sm text-gray-400 uppercase tracking-widest font-medium">{item.label}</span>
                     </div>
                   ))}
+                </div>
+
+                <div className="mt-8 pt-6 border-t border-white/10 w-full flex flex-col items-center">
+                  <p className="text-gray-300 text-sm mb-4">Wondering if it's worth it?</p>
+                  <Link to="/roi" className="inline-flex items-center gap-2 bg-transparent border border-primary text-primary px-6 py-2.5 rounded hover:bg-primary/10 transition-colors uppercase tracking-[2px] font-medium text-xs lg:text-sm">
+                    Calculate Your ROI
+                  </Link>
                 </div>
               </div>
            </div>
