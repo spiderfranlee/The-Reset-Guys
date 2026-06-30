@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Navbar from './components/Navbar.tsx';
 import Hero from './components/Hero.tsx';
 import About from './components/About.tsx';
@@ -12,6 +12,52 @@ import Footer from './components/Footer.tsx';
 import { Waves, Ship, Utensils, ShoppingBag, Music, Flower2, HeartPulse, Mountain } from 'lucide-react';
 
 const HomePage: React.FC = () => {
+  const [waitlistName, setWaitlistName] = useState('');
+  const [waitlistEmail, setWaitlistEmail] = useState('');
+  const [waitlistInsta, setWaitlistInsta] = useState('');
+  const [waitlistTime, setWaitlistTime] = useState('Either');
+  const [waitlistMsg, setWaitlistMsg] = useState('');
+  const [waitlistStatus, setWaitlistStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
+
+  const handleWaitlistSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!waitlistName.trim() || !waitlistEmail.trim() || waitlistStatus === 'submitting') return;
+
+    setWaitlistStatus('submitting');
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: "1843b010-86ee-42ff-a5e2-f33a5bd4ebaf",
+          subject: `2027 Waitlist Registration: ${waitlistName}`,
+          name: waitlistName,
+          email: waitlistEmail,
+          instagram: waitlistInsta || 'Not provided',
+          preferred_timeframe: waitlistTime,
+          message: waitlistMsg || 'No message provided',
+          from_name: "The Reset Clann Waitlist"
+        }),
+      });
+
+      if (response.ok) {
+        setWaitlistStatus('success');
+        setWaitlistName('');
+        setWaitlistEmail('');
+        setWaitlistInsta('');
+        setWaitlistMsg('');
+      } else {
+        setWaitlistStatus('error');
+      }
+    } catch (err) {
+      console.error(err);
+      setWaitlistStatus('error');
+    }
+  };
+
   const extras = [
     { 
       icon: <Waves className="text-primary" size={24} />, 
@@ -113,17 +159,135 @@ const HomePage: React.FC = () => {
            </div>
         </section>
 
-        <section id="dates" className="py-24 bg-dark-gray border-t border-white/5">
-          <div className="max-w-7xl mx-auto px-4 text-center">
-            <h2 className="text-3xl md:text-5xl font-black uppercase text-white mb-8">
-              Upcoming <span className="text-primary">Dates</span>
-            </h2>
-            <div className="p-12 border border-white/10 rounded-xl bg-black/50 inline-block max-w-2xl w-full">
-              <div className="mb-8">
-                <span className="inline-block bg-primary/20 text-primary px-3 py-1 rounded-full text-sm font-bold uppercase mb-2">Next Retreat</span>
-                <h3 className="text-3xl font-bold mb-2 text-white italic uppercase">November 9 - 16, 2026</h3>
-                <p className="text-gray-400 font-bold uppercase tracking-widest">Ayia Napa, Cyprus</p>
-              </div>
+        <section id="waitlist" className="py-24 bg-dark-gray border-t border-white/5">
+          <div className="max-w-4xl mx-auto px-4">
+            <div className="text-center mb-12">
+              <span className="inline-block bg-primary/20 text-primary px-3 py-1 rounded-full text-xs font-bold uppercase mb-3 tracking-widest">Waitlist Open</span>
+              <h2 className="text-3xl md:text-5xl font-black uppercase text-white mb-4">
+                JOIN THE WAITLIST FOR <span className="text-primary">2027</span>
+              </h2>
+              <p className="text-gray-300 font-medium text-sm md:text-base max-w-2xl mx-auto leading-relaxed">
+                Our 2026 retreats are fully booked. Register your interest below to join the exclusive waitlist for our 2027 editions in Cyprus. Members on the waitlist receive 48-hour priority booking access, exclusive early-bird rates, and private invitations before public releases.
+              </p>
+            </div>
+
+            <div className="p-8 md:p-10 border border-white/10 rounded-2xl bg-black/60 backdrop-blur-sm max-w-2xl mx-auto shadow-2xl relative overflow-hidden">
+              <div className="absolute top-0 left-0 w-full h-[4px] bg-primary"></div>
+              
+              {waitlistStatus === 'success' ? (
+                <div className="text-center py-12 animate-fade-in">
+                  <div className="w-16 h-16 bg-primary/20 text-primary rounded-full flex items-center justify-center mx-auto mb-6">
+                    <svg className="w-8 h-8" fill="none" stroke="currentColor" strokeWidth="3" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                  </div>
+                  <h3 className="text-2xl font-black text-white uppercase mb-2">You are on the list!</h3>
+                  <p className="text-gray-400 text-sm max-w-md mx-auto leading-relaxed mb-6">
+                    Thank you for registering. We have received your details and will send your 2027 priority access invitation directly to your inbox when bookings open.
+                  </p>
+                  <button 
+                    onClick={() => setWaitlistStatus('idle')}
+                    className="text-primary hover:text-white text-xs font-bold uppercase tracking-widest transition-colors"
+                  >
+                    Register another person
+                  </button>
+                </div>
+              ) : (
+                <form onSubmit={handleWaitlistSubmit} className="space-y-6">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div className="space-y-2">
+                      <label className="block text-xs uppercase tracking-widest text-gray-400 font-bold">Full Name *</label>
+                      <input 
+                        type="text" 
+                        required
+                        placeholder="John Doe"
+                        value={waitlistName}
+                        onChange={(e) => setWaitlistName(e.target.value)}
+                        className="w-full bg-black/50 border border-white/10 focus:border-primary/50 rounded-lg px-4 py-3 text-white placeholder-gray-600 text-sm focus:outline-none focus:ring-1 focus:ring-primary/30 transition-all"
+                      />
+                    </div>
+                    
+                    <div className="space-y-2">
+                      <label className="block text-xs uppercase tracking-widest text-gray-400 font-bold">Email Address *</label>
+                      <input 
+                        type="email" 
+                        required
+                        placeholder="john@example.com"
+                        value={waitlistEmail}
+                        onChange={(e) => setWaitlistEmail(e.target.value)}
+                        className="w-full bg-black/50 border border-white/10 focus:border-primary/50 rounded-lg px-4 py-3 text-white placeholder-gray-600 text-sm focus:outline-none focus:ring-1 focus:ring-primary/30 transition-all"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div className="space-y-2">
+                      <label className="block text-xs uppercase tracking-widest text-gray-400 font-bold">Instagram Handle</label>
+                      <div className="relative">
+                        <span className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500 text-sm font-bold">@</span>
+                        <input 
+                          type="text" 
+                          placeholder="username"
+                          value={waitlistInsta}
+                          onChange={(e) => setWaitlistInsta(e.target.value)}
+                          className="w-full bg-black/50 border border-white/10 focus:border-primary/50 rounded-lg pl-8 pr-4 py-3 text-white placeholder-gray-600 text-sm focus:outline-none focus:ring-1 focus:ring-primary/30 transition-all"
+                        />
+                      </div>
+                    </div>
+
+                    <div className="space-y-2">
+                      <label className="block text-xs uppercase tracking-widest text-gray-400 font-bold">Preferred Timeframe</label>
+                      <select 
+                        value={waitlistTime}
+                        onChange={(e) => setWaitlistTime(e.target.value)}
+                        className="w-full bg-black/50 border border-white/10 focus:border-primary/50 rounded-lg px-4 py-3 text-white text-sm focus:outline-none focus:ring-1 focus:ring-primary/30 transition-all appearance-none cursor-pointer"
+                        style={{ backgroundImage: `url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%2340E0D0' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'></polyline></svg>")`, backgroundRepeat: 'no-repeat', backgroundPosition: 'right 12px center', backgroundSize: '16px' }}
+                      >
+                        <option value="Spring 2027">Spring 2027</option>
+                        <option value="Autumn 2027">Autumn 2027</option>
+                        <option value="Either">Either timeframe works</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div className="space-y-2">
+                    <label className="block text-xs uppercase tracking-widest text-gray-400 font-bold">What are you hoping to achieve? (Fitness / Stress / Reconnect)</label>
+                    <textarea 
+                      rows={3}
+                      placeholder="Tell us a bit about your fitness goals or what you're looking to reset..."
+                      value={waitlistMsg}
+                      onChange={(e) => setWaitlistMsg(e.target.value)}
+                      className="w-full bg-black/50 border border-white/10 focus:border-primary/50 rounded-lg px-4 py-3 text-white placeholder-gray-600 text-sm focus:outline-none focus:ring-1 focus:ring-primary/30 transition-all resize-none"
+                    ></textarea>
+                  </div>
+
+                  {waitlistStatus === 'error' && (
+                    <p className="text-red-400 text-xs font-bold uppercase tracking-wide">
+                      Oops! Something went wrong. Please check your network connection or try again.
+                    </p>
+                  )}
+
+                  <div className="pt-2">
+                    <button 
+                      type="submit"
+                      disabled={waitlistStatus === 'submitting'}
+                      className="w-full bg-primary hover:bg-primary/90 text-black font-black uppercase tracking-widest text-sm py-4 rounded-lg transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed hover:shadow-[0_0_25px_rgba(64,224,208,0.3)] flex items-center justify-center gap-2"
+                    >
+                      {waitlistStatus === 'submitting' ? (
+                        <>
+                          <svg className="animate-spin h-5 w-5 text-black" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                            <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                            <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                          </svg>
+                          Securing Spot...
+                        </>
+                      ) : (
+                        'Register Your Interest'
+                      )}
+                    </button>
+                  </div>
+                </form>
+              )}
             </div>
           </div>
         </section>

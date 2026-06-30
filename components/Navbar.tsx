@@ -25,7 +25,7 @@ const Navbar: React.FC = () => {
     { name: 'Team', href: '/#team' },
     { name: 'Included', href: '/#whats-included' },
     { name: 'Extras', href: '/#extras' },
-    { name: 'Dates', href: '/#dates' },
+    { name: 'Waitlist 2027', href: '/#waitlist' },
     { name: 'Itinerary', href: '/#itinerary' },
     { name: 'Pricing', href: '/#pricing' },
     { name: 'Villa', href: '/#the-villa' },

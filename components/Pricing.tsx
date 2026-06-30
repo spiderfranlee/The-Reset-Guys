@@ -271,10 +271,19 @@ const Pricing: React.FC = () => {
                    <Button 
                      variant={option.highlight ? 'primary' : 'outline'} 
                      fullWidth 
-                     onClick={() => window.open('https://checkout.revolut.com/pay/a65ebcc8-93ae-4e6b-905a-657b2cbcb4c6', '_blank')}
+                     onClick={() => {
+                       const element = document.getElementById('waitlist');
+                       if (element) {
+                         element.scrollIntoView({ behavior: 'smooth' });
+                         setTimeout(() => {
+                           const nameInput = document.querySelector('input[placeholder="John Doe"]') as HTMLInputElement;
+                           if (nameInput) nameInput.focus();
+                         }, 850);
+                       }
+                     }}
                      className={option.highlight ? 'shadow-lg shadow-primary/20' : ''}
                    >
-                     Book Now
+                     Join 2027 Waitlist
                    </Button>
                 </div>
              </div>
