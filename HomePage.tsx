@@ -167,7 +167,7 @@ const HomePage: React.FC = () => {
                 JOIN THE WAITLIST FOR <span className="text-primary">2027</span>
               </h2>
               <p className="text-gray-300 font-medium text-sm md:text-base max-w-2xl mx-auto leading-relaxed">
-                Our 2026 retreats are fully booked. Register your interest below to join the exclusive waitlist for our 2027 editions in Cyprus. Members on the waitlist receive 48-hour priority booking access, exclusive early-bird rates, and private invitations before public releases.
+                Register your interest below to join the exclusive waitlist for our 2027 editions in Cyprus. Members on the waitlist receive 48-hour priority booking access, exclusive early-bird rates, and private invitations before public releases.
               </p>
             </div>
 
