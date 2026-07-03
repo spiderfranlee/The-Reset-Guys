@@ -5,11 +5,12 @@ import App from './App.tsx';
 import './index.css';
 
 const container = document.getElementById('root');
+
 if (container) {
   const root = createRoot(container);
   root.render(
     <React.StrictMode>
-      <HashRouter basename={import.meta.env.BASE_URL}>
+      <HashRouter>
         <App />
       </HashRouter>
     </React.StrictMode>
