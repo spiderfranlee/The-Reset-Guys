@@ -1,44 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import Button from './Button.tsx';
-import { Check, Star, Clock } from 'lucide-react';
+import { Check, Star } from 'lucide-react';
 
 import RoomsSection from './RoomsSection.tsx';
 
 const Pricing: React.FC = () => {
-  const [timeLeft, setTimeLeft] = useState({
-    days: 0,
-    hours: 0,
-    minutes: 0,
-    seconds: 0
-  });
-
-  useEffect(() => {
-    // Set the date we're counting down to (November 9th, 2026 23:59:59)
-    const countDownDate = new Date("Nov 9, 2026 23:59:59").getTime();
-
-    const updateTimer = () => {
-      const now = new Date().getTime();
-      const distance = countDownDate - now;
-
-      if (distance < 0) {
-        setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
-      } else {
-        setTimeLeft({
-          days: Math.floor(distance / (1000 * 60 * 60 * 24)),
-          hours: Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
-          minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
-          seconds: Math.floor((distance % (1000 * 60)) / 1000)
-        });
-      }
-    };
-
-    updateTimer();
-    const interval = setInterval(updateTimer, 1000);
-
-    return () => clearInterval(interval);
-  }, []);
-
   const options = [
     {
       title: 'VILLA ROOM (Shared Bathroom)',
@@ -124,43 +91,12 @@ const Pricing: React.FC = () => {
              Choose the accommodation that fits your style. All packages include the full retreat experience.
            </p>
            
-           {/* Countdown Timer */}
+           {/* ROI Calculator Link */}
            <div className="max-w-3xl mx-auto mb-12 bg-white/5 border border-primary/30 rounded-2xl p-6 md:p-8 backdrop-blur-sm relative overflow-hidden group">
               <div className="absolute inset-0 bg-primary/5 group-hover:bg-primary/10 transition-colors duration-500"></div>
               
               <div className="relative z-10 flex flex-col items-center">
-                <div className="flex flex-col items-center gap-1 mb-6">
-                  <div className="flex items-center gap-2">
-                    <Clock className="text-primary animate-pulse" size={24} />
-                    <h3 className="text-xl md:text-2xl font-bold text-white uppercase tracking-wider">
-                      Countdown to the Retreat
-                    </h3>
-                  </div>
-                  <span className="text-primary/80 text-sm font-semibold tracking-widest uppercase">
-                    (Starts November 9th, 2026)
-                  </span>
-                </div>
-                
-                <div className="grid grid-cols-4 gap-4 md:gap-8 w-full max-w-2xl">
-                  {[
-                    { label: 'Days', value: timeLeft.days },
-                    { label: 'Hours', value: timeLeft.hours },
-                    { label: 'Minutes', value: timeLeft.minutes },
-                    { label: 'Seconds', value: timeLeft.seconds }
-                  ].map((item, idx) => (
-                    <div key={idx} className="flex flex-col items-center">
-                      <div className="w-full aspect-square bg-black/50 border border-white/10 rounded-xl flex items-center justify-center mb-2 shadow-lg relative overflow-hidden">
-                        <div className="absolute inset-x-0 top-1/2 h-px bg-white/10"></div>
-                        <span className="text-3xl md:text-5xl font-black text-primary font-mono relative z-10">
-                          {item.value.toString().padStart(2, '0')}
-                        </span>
-                      </div>
-                      <span className="text-xs md:text-sm text-gray-400 uppercase tracking-widest font-medium">{item.label}</span>
-                    </div>
-                  ))}
-                </div>
-
-                <div className="mt-8 pt-6 border-t border-white/10 w-full flex flex-col items-center">
+                <div className="flex flex-col items-center">
                   <p className="text-gray-300 text-sm mb-4">Wondering if it's worth it?</p>
                   <Link to="/roi" className="inline-flex items-center gap-2 bg-transparent border border-primary text-primary px-6 py-2.5 rounded hover:bg-primary/10 transition-colors uppercase tracking-[2px] font-medium text-xs lg:text-sm">
                     Calculate Your ROI

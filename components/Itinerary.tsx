@@ -3,7 +3,7 @@ import { ChefHat } from 'lucide-react';
 
 const itineraryData = [
   {
-    dayName: 'MON 9th',
+    dayName: 'MON',
     dayNumber: 'Day 1',
     headerColor: 'bg-[#389189]',
     textColor: 'text-[#389189]',
@@ -13,7 +13,7 @@ const itineraryData = [
     ]
   },
   {
-    dayName: 'TUE 10th',
+    dayName: 'TUE',
     dayNumber: 'Day 2',
     headerColor: 'bg-[#d66144]',
     textColor: 'text-[#d66144]',
@@ -26,7 +26,7 @@ const itineraryData = [
     ]
   },
   {
-    dayName: 'WED 11th',
+    dayName: 'WED',
     dayNumber: 'Day 3',
     headerColor: 'bg-[#389189]',
     textColor: 'text-[#389189]',
@@ -39,7 +39,7 @@ const itineraryData = [
     ]
   },
   {
-    dayName: 'THU 12th',
+    dayName: 'THU',
     dayNumber: 'Day 4',
     headerColor: 'bg-[#c59a45]',
     textColor: 'text-[#c59a45]',
@@ -54,7 +54,7 @@ const itineraryData = [
     ]
   },
   {
-    dayName: 'FRI 13th',
+    dayName: 'FRI',
     dayNumber: 'Day 5',
     headerColor: 'bg-[#d66144]',
     textColor: 'text-[#d66144]',
@@ -67,7 +67,7 @@ const itineraryData = [
     ]
   },
   {
-    dayName: 'SAT 14th',
+    dayName: 'SAT',
     dayNumber: 'Day 6',
     headerColor: 'bg-[#389189]',
     textColor: 'text-[#389189]',
@@ -80,7 +80,7 @@ const itineraryData = [
     ]
   },
   {
-    dayName: 'SUN 15th',
+    dayName: 'SUN',
     dayNumber: 'Day 7',
     headerColor: 'bg-[#b83b32]',
     textColor: 'text-[#b83b32]',
