@@ -1,6 +1,6 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-import { BrowserRouter } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 import App from './App.tsx';
 import './index.css';
 
@@ -9,9 +9,9 @@ if (container) {
   const root = createRoot(container);
   root.render(
     <React.StrictMode>
-      <BrowserRouter>
+      <HashRouter basename={import.meta.env.BASE_URL}>
         <App />
-      </BrowserRouter>
+      </HashRouter>
     </React.StrictMode>
   );
 } else {

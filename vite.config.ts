@@ -5,8 +5,13 @@ import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig(({ mode }) => {
     const env = loadEnv(mode, '.', '');
+    
+    // Automatically use the repository name as the base path for GitHub Pages
+    const githubRepo = process.env.GITHUB_REPOSITORY;
+    const basePath = githubRepo ? `/${githubRepo.split('/')[1]}/` : '/';
+
     return {
-      base: '/', // Use absolute paths for assets so it works on subpaths like /rooms
+      base: './',
       server: {
         port: 3000,
         host: '0.0.0.0',
