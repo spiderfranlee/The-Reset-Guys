@@ -166,20 +166,20 @@ const Pricing: React.FC = () => {
                                <div className="flex items-baseline gap-2">
                                   <span className="text-3xl font-black text-white">{(option as any).sharedPrice}</span>
                                   <span className="text-xs text-primary uppercase font-bold">Total</span>
-                               </div>
+                                </div>
                                <span className="text-gray-300 text-sm font-medium my-0.5">({(option as any).sharedPerPerson} per person)</span>
                             </div>
                          </div>
                       ) : (
                          <>
-                            <span className="text-gray-500 text-lg line-through font-medium mb-1">{option.originalPrice}</span>
+                            <span className="text-gray-500 text-lg line-through font-medium mb-1">{(option as any).originalPrice}</span>
                             <div className="flex items-baseline mb-1">
-                              <span className="text-4xl font-black text-white">{option.price}</span>
-                              <span className="text-gray-500 ml-2 text-sm font-medium uppercase">{option.per}</span>
+                              <span className="text-4xl font-black text-white">{(option as any).price}</span>
+                              <span className="text-gray-500 ml-2 text-sm font-medium uppercase">{(option as any).per}</span>
                             </div>
                             <div className="mt-4 w-full bg-primary/20 border-2 border-primary rounded-xl p-5 text-center shadow-[0_0_20px_rgba(204,255,0,0.3)] transform transition-all hover:scale-[1.05] hover:bg-primary/30">
                               <span className="text-primary text-2xl md:text-3xl font-black uppercase tracking-wider block leading-tight drop-shadow-md">
-                                {option.saveText}
+                                {(option as any).saveText}
                               </span>
                             </div>
                          </>
@@ -197,7 +197,7 @@ const Pricing: React.FC = () => {
                       <li key={idx} className="flex items-start gap-3 text-gray-300 text-sm">
                          <div className={`mt-0.5 p-0.5 rounded-full ${option.highlight ? 'bg-primary text-black' : 'bg-white/10 text-primary'}`}>
                             <Check size={12} strokeWidth={3} />
-                         </div>
+                          </div>
                          {feature}
                       </li>
                    ))}
